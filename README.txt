@@ -1,7 +1,7 @@
 === NABU WordPress Theme ===
 
 Theme Name: NABU
-Version: 1.2.5
+Version: 1.2.6
 Author: Florian Willnat
 Author Email: florian@nabu-diepholz.de
 Requires at least: WordPress 5.9
@@ -23,7 +23,8 @@ typischen NABU-Design-Elemente in WordPress:
 - Responsive Bootstrap 4 Layout
 - Bildslider auf der Startseite (Carousel)
 - Neuigkeiten-Slider mit Slick
-- Rechte Sidebar-Navigation (Pills-Design)
+- Rechte Sidebar-Navigation oben (neben Neuigkeiten-Slider, Pills-Design)
+- Rechte Sidebar-Navigation unten (neben Beitragsliste, Pills-Design)
 - 4-spaltiger Footer
 - Soziale Medien im Footer
 - Meta-Navigation (oben rechts)
@@ -60,12 +61,13 @@ ODER:
 
 === Navigationsmenüs (Design > Menüs) ===
 
-Das Theme unterstützt vier Menü-Positionen:
+Das Theme unterstützt fünf Menü-Positionen:
 
 1. Meta-Navigation (oben rechts) - Kleine Links wie "NABU", "Newsletter", "Shop"
 2. Haupt-Navigation (blaue Leiste) - Hauptnavigation mit Seiten
-3. Sidebar-Navigation (rechts) - Vertikale Pills-Navigation in der Seitenleiste
-4. Footer-Navigation - Links im Footer
+3. Sidebar-Navigation oben (neben Slider) - Vertikale Pills-Navigation neben dem Neuigkeiten-Slider
+4. Sidebar-Navigation unten (neben Beiträgen) - Vertikale Pills-Navigation neben der Beitragsliste
+5. Footer-Navigation - Links im Footer
 
 Tipp: Für den "Mitmachen"-Button in der Navigation fügen Sie dem entsprechenden
 Menüpunkt die CSS-Klasse "nav-link-mitmachen" hinzu (Menüs > Erweitert > CSS-Klassen).
@@ -147,7 +149,12 @@ Empfehlung: Nutzen Sie das "Text"-Widget für freie Inhalte.
 === Sidebar-Widgets ===
 
 Design > Widgets > Sidebar
-Hier können Sie zusätzliche Widgets unter der Sidebar-Navigation platzieren.
+Hier können Sie zusätzliche Widgets unter der oberen Sidebar-Navigation platzieren
+(neben dem Neuigkeiten-Slider).
+
+Design > Widgets > Sidebar unten (neben Beiträgen)
+Hier können Sie Widgets in der rechten Spalte unterhalb der Trennlinie platzieren
+(neben der Beitragsliste).
 
 === RSS-Feed Kästen (Sidebar) ===
 
@@ -228,6 +235,13 @@ Web: https://www.nabu-diepholz.de
 
 
 == Changelog ==
+
+= 1.2.6 =
+* Zweite Sidebar-Navigation unterhalb der horizontalen Trennlinie hinzugefügt
+  (neben der Beitragsliste auf der Startseite)
+* Neues Navigationsmenü „Sidebar-Navigation unten (neben Beiträgen)" unter Design > Menüs
+* Neuer Widget-Bereich „Sidebar unten (neben Beiträgen)" unter Design > Widgets
+* Neue Template-Datei sidebar-bottom.php für die untere Sidebar
 
 = 1.2.5 =
 * Bugfix: Beitragsbild in der Vorschauliste von nabu-teaser (220×110 px) auf nabu-wide
