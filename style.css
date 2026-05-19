@@ -1,0 +1,501 @@
+/*
+Theme Name: NABU
+Theme URI: https://github.com/nabu-theme
+Author: Florian Willnat
+Author URI: https://www.nabu-diepholz.de
+Description: WordPress-Theme für lokale NABU-Gruppen. Basiert auf dem NABU HTML-Design-Template mit Bootstrap 4, Source Sans Pro und dem NABU Farbschema (Blau #0068B4, Grün, Orange).
+Version: 1.2.5
+Requires at least: 5.8
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nabu
+Tags: nature, blue, green, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, footer-widgets, full-width-template
+*/
+
+/*--------------------------------------------------------------
+WordPress Admin Bar Fix
+--------------------------------------------------------------*/
+@media screen and (min-width: 783px) {
+    .admin-bar .header {
+        margin-top: 32px;
+    }
+}
+@media screen and (max-width: 782px) {
+    .admin-bar .header {
+        margin-top: 46px;
+    }
+}
+
+/*--------------------------------------------------------------
+WordPress Alignment Classes
+--------------------------------------------------------------*/
+.alignleft {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+}
+
+.alignright {
+    float: right;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+.wp-caption {
+    max-width: 100%;
+}
+
+.wp-caption-text {
+    font-size: 0.875em;
+    color: #86846b;
+    margin-top: 0.25em;
+}
+
+img.img-responsive,
+.wp-post-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/*--------------------------------------------------------------
+WordPress Comments
+--------------------------------------------------------------*/
+.comment-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.comment-list .children {
+    list-style: none;
+    padding-left: 2em;
+}
+
+.comment-meta {
+    font-size: 0.875em;
+    color: #86846b;
+    margin-bottom: 0.5em;
+}
+
+.comment-body {
+    border-bottom: 1px solid #e3e2d4;
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.comment-reply-link {
+    font-size: 0.875em;
+}
+
+/*--------------------------------------------------------------
+WordPress Search Form Override
+--------------------------------------------------------------*/
+.search-form .search-field {
+    font-size: 0.74rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: #0068B4 1px solid;
+}
+
+/*--------------------------------------------------------------
+Sticky Post
+--------------------------------------------------------------*/
+.sticky {
+    border-left: 4px solid #0068B4;
+    padding-left: 1em;
+}
+
+/*--------------------------------------------------------------
+Screen Reader Text
+--------------------------------------------------------------*/
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 0.875rem;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
+/*--------------------------------------------------------------
+Pagination
+--------------------------------------------------------------*/
+.navigation .nav-links {
+    display: flex;
+    gap: 0.5em;
+    margin: 2em 0;
+}
+
+.navigation .nav-links a,
+.navigation .nav-links span {
+    display: inline-block;
+    padding: 0.5em 0.75em;
+    border: 1px solid #c6c4b3;
+    text-decoration: none;
+    color: #0068B4;
+}
+
+.navigation .nav-links .current {
+    background: #0068B4;
+    color: #fff;
+    border-color: #0068B4;
+}
+
+/*--------------------------------------------------------------
+Skip Link
+--------------------------------------------------------------*/
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    padding: 1em;
+    background: #0068B4;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+Custom Logo Anpassung
+--------------------------------------------------------------*/
+.custom-logo-link img {
+    width: 100%;
+    height: auto;
+}
+
+/*--------------------------------------------------------------
+Post Pagination (within content)
+--------------------------------------------------------------*/
+.page-links {
+    margin: 1.5em 0;
+}
+
+.page-links a,
+.page-links span {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border: 1px solid #0068B4;
+    margin-right: 0.25em;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+Entry Footer (Kategorien, Schlagwörter, Kommentarlink)
+--------------------------------------------------------------*/
+.entry-footer {
+    background: transparent;
+    padding: 0.3em 0;
+    margin-top: 0.4em;
+    font-size: 0.8em;
+    line-height: 1.3;
+    color: #86846b;
+}
+
+.entry-footer a {
+    color: #0068B4;
+    text-decoration: none;
+}
+
+.entry-footer a:hover {
+    text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+Footer – Spendenkonto Tabelle
+--------------------------------------------------------------*/
+.footer-donation-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 0.75em;
+}
+
+.footer-donation-table th,
+.footer-donation-table td {
+    text-align: left;
+    padding: 0.15em 0;
+    vertical-align: top;
+    border: none;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.footer-donation-table th {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+/*--------------------------------------------------------------
+RSS-Feed Widget (Sidebar)
+--------------------------------------------------------------*/
+.widget.nabu-rss-widget {
+    border: 1px solid #c6c4b3;
+    background: #fff;
+    margin-bottom: 1.2em;
+}
+
+.widget.nabu-rss-widget .widget-title {
+    background: #0068B4;
+    color: #fff;
+    margin: 0;
+    padding: 0.5em 0.75em;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.nabu-rss-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nabu-rss-item {
+    padding: 0.5em 0.75em;
+    border-bottom: 1px solid #e3e2d4;
+    font-size: 0.88em;
+    line-height: 1.4;
+}
+
+.nabu-rss-item:last-child {
+    border-bottom: none;
+}
+
+.nabu-rss-item a {
+    color: #0068B4;
+    text-decoration: none;
+    display: block;
+}
+
+.nabu-rss-item a:hover {
+    color: #003c68;
+    text-decoration: underline;
+}
+
+.nabu-rss-date {
+    display: block;
+    font-size: 0.8em;
+    color: #86846b;
+    margin-top: 0.2em;
+}
+
+/*--------------------------------------------------------------
+Block Editor – Ausrichtungen
+--------------------------------------------------------------*/
+.entry-content .alignwide,
+.entry-summary .alignwide {
+    margin-left:  -80px;
+    margin-right: -80px;
+    max-width: calc(100% + 160px);
+    width: calc(100% + 160px);
+}
+
+.entry-content .alignfull,
+.entry-summary .alignfull {
+    margin-left:  calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    max-width: 100vw;
+    width: 100vw;
+}
+
+@media (max-width: 960px) {
+    .entry-content .alignwide,
+    .entry-summary .alignwide {
+        margin-left:  0;
+        margin-right: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/*--------------------------------------------------------------
+Block Editor – Responsive Embeds
+--------------------------------------------------------------*/
+.wp-block-embed__wrapper {
+    position: relative;
+}
+
+.wp-has-aspect-ratio .wp-block-embed__wrapper::before {
+    content: '';
+    display: block;
+}
+
+.wp-embed-aspect-16-9 .wp-block-embed__wrapper::before { padding-top: 56.25%; }
+.wp-embed-aspect-4-3  .wp-block-embed__wrapper::before { padding-top: 75%; }
+.wp-embed-aspect-1-1  .wp-block-embed__wrapper::before { padding-top: 100%; }
+
+.wp-has-aspect-ratio .wp-block-embed__wrapper iframe {
+    position: absolute;
+    top:  0;
+    left: 0;
+    width:  100%;
+    height: 100%;
+}
+
+/*--------------------------------------------------------------
+Block Editor – NABU Farbpalette (Frontend-Klassen)
+--------------------------------------------------------------*/
+.has-nabu-blau-color            { color: #0068B4 !important; }
+.has-nabu-blau-background-color { background-color: #0068B4 !important; color: #fff; }
+
+.has-nabu-dunkelblau-color            { color: #003c68 !important; }
+.has-nabu-dunkelblau-background-color { background-color: #003c68 !important; color: #fff; }
+
+.has-nabu-gruen-color            { color: #76b828 !important; }
+.has-nabu-gruen-background-color { background-color: #76b828 !important; color: #fff; }
+
+.has-nabu-orange-color            { color: #ef7c00 !important; }
+.has-nabu-orange-background-color { background-color: #ef7c00 !important; color: #fff; }
+
+.has-nabu-hintergrund-color            { color: #e3e2d4 !important; }
+.has-nabu-hintergrund-background-color { background-color: #e3e2d4 !important; }
+
+.has-nabu-weiss-color            { color: #ffffff !important; }
+.has-nabu-weiss-background-color { background-color: #ffffff !important; }
+
+.has-nabu-text-color            { color: #333333 !important; }
+.has-nabu-text-background-color { background-color: #333333 !important; color: #fff; }
+
+/*--------------------------------------------------------------
+Block Editor – Button Block
+--------------------------------------------------------------*/
+.wp-block-button__link {
+    border-radius: 0;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+    background-color: #0068B4;
+    border-color: #0068B4;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+    background-color: #003c68;
+    border-color: #003c68;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+    color: #0068B4;
+    border-color: #0068B4;
+}
+
+/*--------------------------------------------------------------
+Block Editor – Quote / Pullquote
+--------------------------------------------------------------*/
+.wp-block-quote {
+    border-left: 4px solid #0068B4;
+    padding-left: 1em;
+}
+
+.wp-block-pullquote {
+    border-top: 4px solid #0068B4;
+    border-bottom: 4px solid #0068B4;
+}
+
+/*--------------------------------------------------------------
+Block Editor – Tabelle
+--------------------------------------------------------------*/
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+    background-color: #e3e2d4;
+}
+
+/*--------------------------------------------------------------
+Block Editor – Bild-Unterschrift
+--------------------------------------------------------------*/
+.wp-block-image figcaption,
+.wp-block-gallery figcaption {
+    color: #86846b;
+    font-size: 0.875em;
+}
+
+/*--------------------------------------------------------------
+Block Styles – Benutzerdefinierte Stilvarianten
+--------------------------------------------------------------*/
+
+/* Button: Mitmachen (Orange) */
+.wp-block-button.is-style-nabu-mitmachen .wp-block-button__link {
+    background-color: #ef7c00;
+    border-color:     #ef7c00;
+    color: #fff;
+}
+
+.wp-block-button.is-style-nabu-mitmachen .wp-block-button__link:hover {
+    background-color: #bc6200;
+    border-color:     #bc6200;
+}
+
+/* Quote: NABU Hervorhebung */
+.wp-block-quote.is-style-nabu-hervorhebung {
+    border-left: 6px solid #0068B4;
+    background-color: #e3e2d4;
+    padding: 1.25em 1.5em;
+    font-style: normal;
+}
+
+.wp-block-quote.is-style-nabu-hervorhebung p {
+    font-size: 1.15em;
+    color: #003c68;
+    font-weight: 600;
+}
+
+.wp-block-quote.is-style-nabu-hervorhebung cite {
+    color: #86846b;
+    font-size: 0.875em;
+}
+
+/* Separator: NABU Blau */
+.wp-block-separator.is-style-nabu {
+    border-color: #0068B4;
+    border-top-width: 3px;
+    opacity: 1;
+}
+
+/* Image: NABU Teaser */
+.wp-block-image.is-style-nabu-teaser img {
+    border-bottom: 3px solid #0068B4;
+}
+
+.wp-block-image.is-style-nabu-teaser figcaption {
+    background-color: #e3e2d4;
+    padding: 0.4em 0.6em;
+    color: #333;
+    font-size: 0.875em;
+}
