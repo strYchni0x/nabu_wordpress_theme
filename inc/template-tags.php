@@ -282,12 +282,27 @@ function nabu_logo() {
 }
 
 /**
- * Sidebar-Navigation ausgeben
+ * Sidebar-Navigation oben ausgeben
  */
 function nabu_sidebar_nav() {
 	if ( has_nav_menu( 'sidebar-nav' ) ) {
 		wp_nav_menu( array(
 			'theme_location' => 'sidebar-nav',
+			'container'      => false,
+			'menu_class'     => 'nav nav-pills nav-stacked',
+			'walker'         => new Nabu_Walker_Sidebar_Nav(),
+			'fallback_cb'    => '__return_false',
+		) );
+	}
+}
+
+/**
+ * Sidebar-Navigation unten ausgeben
+ */
+function nabu_sidebar_bottom_nav() {
+	if ( has_nav_menu( 'sidebar-nav-bottom' ) ) {
+		wp_nav_menu( array(
+			'theme_location' => 'sidebar-nav-bottom',
 			'container'      => false,
 			'menu_class'     => 'nav nav-pills nav-stacked',
 			'walker'         => new Nabu_Walker_Sidebar_Nav(),

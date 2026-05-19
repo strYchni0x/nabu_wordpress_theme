@@ -219,7 +219,7 @@ get_header();
 			<?php endif; ?>
 		</div>
 		<div class="col-md-3">
-			<?php get_sidebar(); ?>
+			<?php get_sidebar( 'bottom' ); ?>
 		</div>
 	</div>
 </div><!-- .container.content -->

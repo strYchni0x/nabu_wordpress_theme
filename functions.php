@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme-Konstanten
-define( 'NABU_VERSION', '1.2.5' );
+define( 'NABU_VERSION', '1.2.6' );
 define( 'NABU_DIR', get_template_directory() );
 define( 'NABU_URI', get_template_directory_uri() );
 
@@ -99,10 +99,11 @@ function nabu_setup() {
 
 	// Navigationsmenüs registrieren
 	register_nav_menus( array(
-		'meta-nav'    => esc_html__( 'Meta-Navigation (oben rechts)', 'nabu' ),
-		'main-nav'    => esc_html__( 'Haupt-Navigation (blaue Leiste)', 'nabu' ),
-		'sidebar-nav' => esc_html__( 'Sidebar-Navigation (rechts)', 'nabu' ),
-		'footer-nav'  => esc_html__( 'Footer-Navigation', 'nabu' ),
+		'meta-nav'           => esc_html__( 'Meta-Navigation (oben rechts)', 'nabu' ),
+		'main-nav'           => esc_html__( 'Haupt-Navigation (blaue Leiste)', 'nabu' ),
+		'sidebar-nav'        => esc_html__( 'Sidebar-Navigation oben (neben Slider)', 'nabu' ),
+		'sidebar-nav-bottom' => esc_html__( 'Sidebar-Navigation unten (neben Beiträgen)', 'nabu' ),
+		'footer-nav'         => esc_html__( 'Footer-Navigation', 'nabu' ),
 	) );
 }
 add_action( 'after_setup_theme', 'nabu_setup' );
@@ -124,6 +125,17 @@ function nabu_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'nabu' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Widgets in der rechten Seitenleiste.', 'nabu' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h6 class="widget-title">',
+		'after_title'   => '</h6>',
+	) );
+
+	// Sidebar unten (neben Beiträgen)
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar unten (neben Beiträgen)', 'nabu' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Widgets in der rechten Seitenleiste unterhalb der Trennlinie.', 'nabu' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h6 class="widget-title">',
