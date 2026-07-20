@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: NABU 1.2.7\n"
+"Project-Id-Version: NABU 1.2.8\n"
 "Report-Msgid-Bugs-To: https://github.com/strYchni0x/nabu_wordpress_theme/issues\n"
-"POT-Creation-Date: 2026-07-20 18:45+0000\n"
+"POT-Creation-Date: 2026-07-20 19:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -166,15 +166,11 @@ msgstr ""
 msgid "Get involved (orange)"
 msgstr ""
 
-#: inc/template-tags.php:152
-msgid "Home"
-msgstr ""
-
 #: inc/customizer.php:254
 msgid "IBAN"
 msgstr ""
 
-#: header.php:63
+#: header.php:74
 msgid "Image slider"
 msgstr ""
 
@@ -183,7 +179,7 @@ msgstr ""
 msgid "Latest news"
 msgstr ""
 
-#: header.php:53
+#: header.php:64
 msgid "Learn more"
 msgstr ""
 
@@ -219,7 +215,7 @@ msgstr ""
 msgid "Link 3 - text"
 msgstr ""
 
-#: header.php:45
+#: header.php:46
 msgid "Main navigation"
 msgstr ""
 
@@ -302,7 +298,7 @@ msgid "News"
 msgstr ""
 
 #: front-page.php:112
-#: header.php:100
+#: header.php:111
 msgid "Next"
 msgstr ""
 
@@ -344,6 +340,7 @@ msgid "One comment on &ldquo;%1$s&rdquo;"
 msgstr ""
 
 #: front-page.php:20
+#: header.php:54
 msgid "Open menu"
 msgstr ""
 
@@ -391,7 +388,7 @@ msgid "Posts per page (front page)"
 msgstr ""
 
 #: front-page.php:109
-#: header.php:96
+#: header.php:107
 msgid "Previous"
 msgstr ""
 

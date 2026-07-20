@@ -41,8 +41,19 @@
 				</form>
 			</nav>
 
-			<!-- Blaue Leiste (ohne Navigation) -->
+			<!-- Blaue Leiste: nur befüllt, wenn ein Menü zugewiesen ist,
+			     sonst bleibt sie wie im NABU-Design rein dekorativ -->
 			<nav class="navbar navbar-dark bg-primary" aria-label="<?php esc_attr_e( 'Main navigation', 'nabu' ); ?>">
+				<?php if ( has_nav_menu( 'main-nav' ) ) : ?>
+					<button class="navbar-toggler hidden-lg-up"
+						type="button"
+						data-toggle="collapse"
+						data-target="#mobilenav"
+						aria-controls="mobilenav"
+						aria-expanded="false"
+						aria-label="<?php esc_attr_e( 'Open menu', 'nabu' ); ?>">&#9776;</button>
+					<?php nabu_main_navigation(); ?>
+				<?php endif; ?>
 			</nav>
 		</div><!-- .header-content -->
 

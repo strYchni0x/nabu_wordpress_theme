@@ -111,52 +111,33 @@ function nabu_breadcrumb() {
  * Hauptnavigation ausgeben (Desktop + Mobile)
  */
 function nabu_main_navigation() {
+	if ( ! has_nav_menu( 'main-nav' ) ) {
+		return;
+	}
+
 	$walker = new Nabu_Walker_Nav_Menu();
 
 	// Desktop-Navigation
 	echo '<div class="navbar-toggleable-md hidden-md-down">';
-	if ( has_nav_menu( 'main-nav' ) ) {
-		wp_nav_menu( array(
-			'theme_location' => 'main-nav',
-			'container'      => false,
-			'menu_class'     => 'nav navbar-nav',
-			'walker'         => $walker,
-			'fallback_cb'    => '__return_false',
-		) );
-	} else {
-		nabu_default_main_nav();
-	}
-	echo '</div>';
-
-	// Mobile-Navigation
-	echo '<div class="navbar-toggleable-md hidden-lg-up collapse" id="mobilenav">';
-	if ( has_nav_menu( 'main-nav' ) ) {
-		wp_nav_menu( array(
-			'theme_location' => 'main-nav',
-			'container'      => false,
-			'menu_class'     => 'nav',
-			'walker'         => $walker,
-			'fallback_cb'    => '__return_false',
-		) );
-	} else {
-		nabu_default_main_nav();
-	}
-	echo '</div>';
-}
-
-/**
- * Standard-Navigation wenn kein Menü konfiguriert
- */
-function nabu_default_main_nav() {
-	echo '<ul class="nav navbar-nav">';
-	echo '<li class="nav-item"><a class="nav-link" href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'nabu' ) . '</a></li>';
-	wp_list_pages( array(
-		'title_li' => '',
-		'before'   => '<li class="nav-item">',
-		'after'    => '</li>',
-		'walker'   => new Nabu_Walker_Nav_Menu(),
+	wp_nav_menu( array(
+		'theme_location' => 'main-nav',
+		'container'      => false,
+		'menu_class'     => 'nav navbar-nav',
+		'walker'         => $walker,
+		'fallback_cb'    => '__return_false',
 	) );
-	echo '</ul>';
+	echo '</div>';
+
+	// Mobile-Navigation, wird per Bootstrap-Collapse vom Button in header.php geöffnet
+	echo '<div class="navbar-toggleable-md hidden-lg-up collapse" id="mobilenav">';
+	wp_nav_menu( array(
+		'theme_location' => 'main-nav',
+		'container'      => false,
+		'menu_class'     => 'nav',
+		'walker'         => $walker,
+		'fallback_cb'    => '__return_false',
+	) );
+	echo '</div>';
 }
 
 /**

@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the NABU theme.
 msgid ""
 msgstr ""
-"Project-Id-Version: NABU 1.2.7\n"
+"Project-Id-Version: NABU 1.2.8\n"
 "Report-Msgid-Bugs-To: https://github.com/strYchni0x/nabu_wordpress_theme/issues\n"
-"POT-Creation-Date: 2026-07-20 18:46+0000\n"
-"PO-Revision-Date: 2026-07-20 18:46+0000\n"
+"POT-Creation-Date: 2026-07-20 19:38+0000\n"
+"PO-Revision-Date: 2026-07-20 19:38+0000\n"
 "Last-Translator: Florian Willnat <florian@nabu-diepholz.de>\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
@@ -168,15 +168,11 @@ msgstr "Startseite – Neuigkeiten"
 msgid "Get involved (orange)"
 msgstr "Mitmachen (Orange)"
 
-#: inc/template-tags.php:152
-msgid "Home"
-msgstr "Startseite"
-
 #: inc/customizer.php:254
 msgid "IBAN"
 msgstr "IBAN"
 
-#: header.php:63
+#: header.php:74
 msgid "Image slider"
 msgstr "Bildslider"
 
@@ -185,7 +181,7 @@ msgstr "Bildslider"
 msgid "Latest news"
 msgstr "Aktuelle Meldungen"
 
-#: header.php:53
+#: header.php:64
 msgid "Learn more"
 msgstr "Mehr erfahren"
 
@@ -221,7 +217,7 @@ msgstr "Link 3 - URL"
 msgid "Link 3 - text"
 msgstr "Link 3 - Text"
 
-#: header.php:45
+#: header.php:46
 msgid "Main navigation"
 msgstr "Haupt-Navigation"
 
@@ -304,7 +300,7 @@ msgid "News"
 msgstr "Aktuelles"
 
 #: front-page.php:112
-#: header.php:100
+#: header.php:111
 msgid "Next"
 msgstr "Weiter"
 
@@ -346,6 +342,7 @@ msgid "One comment on &ldquo;%1$s&rdquo;"
 msgstr "Ein Kommentar zu &ldquo;%1$s&rdquo;"
 
 #: front-page.php:20
+#: header.php:54
 msgid "Open menu"
 msgstr "Menü öffnen"
 
@@ -393,7 +390,7 @@ msgid "Posts per page (front page)"
 msgstr "Beiträge pro Seite (Hauptseite)"
 
 #: front-page.php:109
-#: header.php:96
+#: header.php:107
 msgid "Previous"
 msgstr "Zurück"
 

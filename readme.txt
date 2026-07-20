@@ -2,7 +2,7 @@
 
 Theme Name: NABU
 Theme URI: https://github.com/strYchni0x/nabu_wordpress_theme
-Version: 1.2.7
+Version: 1.2.8
 Author: Florian Willnat
 Author Email: florian@nabu-diepholz.de
 Requires at least: WordPress 5.8
@@ -30,7 +30,8 @@ typischen NABU-Design-Elemente in WordPress:
 - 4-spaltiger Footer
 - Soziale Medien im Footer
 - Meta-Navigation (oben rechts)
-- Blaue Navigationsleiste (dekorativ, ohne Links)
+- Blaue Navigationsleiste: dekorativ, oder optional mit Hauptnavigation
+  (inkl. eingeklapptem Mobilmenü, sobald ein Menü zugewiesen ist)
 - Logo schwebend über der blauen Leiste (160 × 152 px, weißer Hintergrund)
 - Paginierte Beitragsliste auf der Startseite (konfigurierbar, Standard: 5 pro Seite)
 - Automatische Beitragskürzung nach 150 Wörtern mit Weiterlesen-Link
@@ -66,7 +67,11 @@ ODER:
 Das Theme unterstützt fünf Menü-Positionen:
 
 1. Meta-Navigation (oben rechts) - Kleine Links wie "NABU", "Newsletter", "Shop"
-2. Haupt-Navigation (blaue Leiste) - Hauptnavigation mit Seiten
+2. Haupt-Navigation (blaue Leiste) - Hauptnavigation mit Seiten. Diese Position ist
+   optional: Solange ihr kein Menü zugewiesen ist, bleibt die blaue Leiste leer und
+   rein dekorativ, wie im originalen NABU-Design. Sobald ein Menü zugewiesen wird,
+   erscheinen die Links in der Leiste; auf schmalen Bildschirmen klappt stattdessen
+   ein Menü-Button (☰) das Mobilmenü auf.
 3. Sidebar-Navigation oben (neben Slider) - Vertikale Pills-Navigation neben dem Neuigkeiten-Slider
 4. Sidebar-Navigation unten (neben Beiträgen) - Vertikale Pills-Navigation neben der Beitragsliste
 5. Footer-Navigation - Links im Footer
@@ -331,6 +336,19 @@ Web: https://www.nabu-diepholz.de
 
 
 == Changelog ==
+
+= 1.2.8 =
+* Bugfix: Die Menüposition "Haupt-Navigation (blaue Leiste)" war zwar registriert und
+  in Design > Menüs zuweisbar, hatte aber keinerlei Wirkung – header.php gab die blaue
+  Leiste als leeres Element aus und rief nabu_main_navigation() nie auf. Damit waren
+  auch das eingeklappte Mobilmenü (#mobilenav) und der Walker Nabu_Walker_Nav_Menu
+  unerreichbar. Der Fehler bestand seit dem ersten Release.
+* Die Hauptnavigation wird jetzt in header.php ausgegeben, inklusive Menü-Button (☰)
+  für das Bootstrap-Collapse-Mobilmenü auf schmalen Bildschirmen
+* Die Position bleibt bewusst optional: Ohne zugewiesenes Menü bleibt die blaue Leiste
+  leer wie bisher. Der frühere Fallback nabu_default_main_nav() hätte per
+  wp_list_pages() sämtliche Seiten aufgelistet und damit bestehende Installationen
+  ungefragt verändert – er wurde deshalb entfernt.
 
 = 1.2.7 =
 * Source Sans Pro wird jetzt lokal ausgeliefert (fonts/source-sans-pro/, neue
