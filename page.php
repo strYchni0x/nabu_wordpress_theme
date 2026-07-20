@@ -31,7 +31,7 @@ get_header();
 						<?php the_content(); ?>
 						<?php
 						wp_link_pages( array(
-							'before' => '<div class="page-links">' . esc_html__( 'Seiten:', 'nabu' ),
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'nabu' ),
 							'after'  => '</div>',
 						) );
 						?>
@@ -43,7 +43,7 @@ get_header();
 						edit_post_link(
 							sprintf(
 								wp_kses(
-									__( 'Seite bearbeiten <span class="screen-reader-text">"%s"</span>', 'nabu' ),
+									__( 'Edit page <span class="screen-reader-text">"%s"</span>', 'nabu' ),
 									array( 'span' => array( 'class' => array() ) )
 								),
 								wp_kses_post( get_the_title() )

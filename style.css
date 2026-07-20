@@ -1,17 +1,17 @@
 /*
 Theme Name: NABU
-Theme URI: https://github.com/nabu-theme
+Theme URI: https://github.com/strYchni0x/nabu_wordpress_theme
 Author: Florian Willnat
 Author URI: https://www.nabu-diepholz.de
-Description: WordPress-Theme für lokale NABU-Gruppen. Basiert auf dem NABU HTML-Design-Template mit Bootstrap 4, Source Sans Pro und dem NABU Farbschema (Blau #0068B4, Grün, Orange).
-Version: 1.2.6
+Description: WordPress theme for local NABU groups (German nature conservation association). Based on the NABU HTML design template with Bootstrap 4, Source Sans Pro and the NABU colour scheme (blue #0068B4, green, orange). Two-column layout with right sidebar, image slider, four-column footer and full block editor support. German documentation is included in readme.txt.
+Version: 1.2.7
 Requires at least: 5.8
-Tested up to: 6.4
+Tested up to: 6.9
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: nabu
-Tags: nature, blue, green, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, footer-widgets, full-width-template
+Tags: blue, green, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, footer-widgets, full-width-template
 */
 
 /*--------------------------------------------------------------

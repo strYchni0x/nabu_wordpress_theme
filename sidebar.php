@@ -7,7 +7,7 @@
 
 	<!-- Sidebar-Navigation (Pills) -->
 	<?php if ( has_nav_menu( 'sidebar-nav' ) ) : ?>
-	<nav class="nav-main-right hidden-sm-down" aria-label="<?php esc_attr_e( 'Sidebar-Navigation', 'nabu' ); ?>">
+	<nav class="nav-main-right hidden-sm-down" aria-label="<?php esc_attr_e( 'Sidebar navigation', 'nabu' ); ?>">
 		<?php nabu_sidebar_nav(); ?>
 	</nav>
 	<?php endif; ?>

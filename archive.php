@@ -49,8 +49,8 @@ get_header();
 				<?php
 				the_posts_pagination( array(
 					'mid_size'  => 2,
-					'prev_text' => '&larr; ' . esc_html__( 'Neuere Beiträge', 'nabu' ),
-					'next_text' => esc_html__( 'Ältere Beiträge', 'nabu' ) . ' &rarr;',
+					'prev_text' => '&larr; ' . esc_html__( 'Newer posts', 'nabu' ),
+					'next_text' => esc_html__( 'Older posts', 'nabu' ) . ' &rarr;',
 				) );
 				?>
 

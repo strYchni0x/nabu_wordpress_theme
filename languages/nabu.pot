@@ -1,0 +1,575 @@
+# Copyright (C) 2026 Florian Willnat
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: NABU 1.2.7\n"
+"Report-Msgid-Bugs-To: https://github.com/strYchni0x/nabu_wordpress_theme/issues\n"
+"POT-Creation-Date: 2026-07-20 18:45+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: nabu\n"
+
+#: comments.php:78
+msgid " Required fields are marked *."
+msgstr ""
+
+#: comments.php:24
+msgid "%1$s comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:51
+msgid "&larr; Older comments"
+msgstr ""
+
+#: inc/template-tags.php:35
+msgid ", "
+msgstr ""
+
+#: inc/customizer.php:36
+msgid "Accent colour (\"Get involved\" button)"
+msgstr ""
+
+#: footer.php:87
+#: inc/customizer.php:252
+msgid "Account holder"
+msgstr ""
+
+#: inc/customizer.php:78
+msgid "Additional links in the meta navigation at the top right. Alternatively configure the \"Meta navigation\" menu under Appearance > Menus."
+msgstr ""
+
+#: inc/customizer.php:256
+msgid "Additional note"
+msgstr ""
+
+#: footer.php:12
+msgid "Address & contact"
+msgstr ""
+
+#: inc/template-tags.php:99
+msgid "Author: %s"
+msgstr ""
+
+#: inc/customizer.php:255
+msgid "BIC"
+msgstr ""
+
+#: functions.php:70
+msgid "Background beige"
+msgstr ""
+
+#: footer.php:90
+#: inc/customizer.php:253
+msgid "Bank"
+msgstr ""
+
+#: inc/class-nabu-rss-widget.php:92
+msgid "Box title:"
+msgstr ""
+
+#: inc/customizer.php:166
+msgid "Button text in the slider"
+msgstr ""
+
+#: inc/template-tags.php:38
+msgid "Categories: %1$s"
+msgstr ""
+
+#: inc/customizer.php:38
+msgid "Colour of the \"Get involved\" button in the navigation. CSS class: nav-link-mitmachen"
+msgstr ""
+
+#: comments.php:48
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:67
+msgid "Comments are closed for this post."
+msgstr ""
+
+#: inc/class-nabu-rss-widget.php:29
+msgid "Current news"
+msgstr ""
+
+#: footer.php:76
+msgid "Donation account"
+msgstr ""
+
+#: page.php:46
+msgid "Edit page <span class=\"screen-reader-text\">\"%s\"</span>"
+msgstr ""
+
+#: single.php:56
+msgid "Edit post <span class=\"screen-reader-text\">\"%s\"</span>"
+msgstr ""
+
+#: inc/customizer.php:226
+msgid "Email address"
+msgstr ""
+
+#: inc/customizer.php:56
+msgid "Email address (mailto:)"
+msgstr ""
+
+#: header.php:34
+msgid "Enter a search term"
+msgstr ""
+
+#: search.php:82
+msgid "Enter a search term..."
+msgstr ""
+
+#: functions.php:106
+msgid "Footer navigation"
+msgstr ""
+
+#: inc/customizer.php:216
+msgid "Footer – address & contact"
+msgstr ""
+
+#: inc/customizer.php:246
+msgid "Footer – donation account"
+msgstr ""
+
+#: functions.php:150
+msgid "Footer: address & contact"
+msgstr ""
+
+#: functions.php:151
+msgid "Footer: column 2"
+msgstr ""
+
+#: functions.php:152
+msgid "Footer: column 3"
+msgstr ""
+
+#: functions.php:153
+msgid "Footer: donation account"
+msgstr ""
+
+#: inc/customizer.php:145
+msgid "Front page – image slider"
+msgstr ""
+
+#: inc/customizer.php:175
+msgid "Front page – news"
+msgstr ""
+
+#: functions.php:372
+msgid "Get involved (orange)"
+msgstr ""
+
+#: inc/template-tags.php:152
+msgid "Home"
+msgstr ""
+
+#: inc/customizer.php:254
+msgid "IBAN"
+msgstr ""
+
+#: header.php:63
+msgid "Image slider"
+msgstr ""
+
+#: front-page.php:34
+#: index.php:18
+msgid "Latest news"
+msgstr ""
+
+#: header.php:53
+msgid "Learn more"
+msgstr ""
+
+#: inc/template-tags.php:57
+msgid "Leave a comment <span class=\"screen-reader-text\">on %s</span>"
+msgstr ""
+
+#: inc/customizer.php:198
+msgid "Leave empty to use the automatic blog page URL."
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Link 1 - URL"
+msgstr ""
+
+#: inc/customizer.php:86
+msgid "Link 1 - text"
+msgstr ""
+
+#: inc/customizer.php:116
+msgid "Link 2 - URL"
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "Link 2 - text"
+msgstr ""
+
+#: inc/customizer.php:136
+msgid "Link 3 - URL"
+msgstr ""
+
+#: inc/customizer.php:126
+msgid "Link 3 - text"
+msgstr ""
+
+#: header.php:45
+msgid "Main navigation"
+msgstr ""
+
+#: functions.php:103
+msgid "Main navigation (blue bar)"
+msgstr ""
+
+#: header.php:25
+msgid "Meta navigation"
+msgstr ""
+
+#: functions.php:102
+msgid "Meta navigation (top right)"
+msgstr ""
+
+#: inc/customizer.php:76
+msgid "Meta navigation links"
+msgstr ""
+
+#: footer.php:114
+msgid "Mobile sidebar navigation"
+msgstr ""
+
+#: front-page.php:106
+msgid "More news at a glance"
+msgstr ""
+
+#: inc/class-nabu-rss-widget.php:16
+msgid "NABU RSS feed"
+msgstr ""
+
+#: functions.php:50
+#: functions.php:382
+msgid "NABU blue"
+msgstr ""
+
+#: inc/customizer.php:16
+msgid "NABU colours"
+msgstr ""
+
+#: functions.php:55
+msgid "NABU dark blue"
+msgstr ""
+
+#: functions.php:60
+msgid "NABU green"
+msgstr ""
+
+#: functions.php:377
+msgid "NABU highlight"
+msgstr ""
+
+#: functions.php:65
+msgid "NABU orange"
+msgstr ""
+
+#: functions.php:387
+msgid "NABU teaser"
+msgstr ""
+
+#: inc/customizer.php:222
+msgid "Name of the group / organisation"
+msgstr ""
+
+#: footer.php:58
+msgid "Navigation"
+msgstr ""
+
+#: comments.php:55
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: archive.php:52
+#: index.php:56
+msgid "Newer posts"
+msgstr ""
+
+#: front-page.php:34
+msgid "News"
+msgstr ""
+
+#: front-page.php:112
+#: header.php:100
+msgid "Next"
+msgstr ""
+
+#: search.php:63
+msgid "Next results"
+msgstr ""
+
+#: template-parts/content-none.php:32
+msgid "No posts were found. Perhaps a search will help?"
+msgstr ""
+
+#: search.php:72
+msgid "No results were found for \"%s\". Please try a different search term."
+msgstr ""
+
+#: template-parts/content-none.php:9
+msgid "Nothing found"
+msgstr ""
+
+#: inc/class-nabu-rss-widget.php:113
+msgid "Number of entries (1–5):"
+msgstr ""
+
+#: inc/customizer.php:184
+msgid "Number of news items in the slider"
+msgstr ""
+
+#: inc/customizer.php:155
+msgid "Number of slider images"
+msgstr ""
+
+#: archive.php:53
+#: index.php:57
+msgid "Older posts"
+msgstr ""
+
+#: comments.php:19
+msgid "One comment on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: front-page.php:20
+msgid "Open menu"
+msgstr ""
+
+#: front-page.php:140
+msgid "Our Facebook page"
+msgstr ""
+
+#: front-page.php:127
+msgid "Our YouTube channel"
+msgstr ""
+
+#: 404.php:15
+#: inc/template-tags.php:103
+msgid "Page not found"
+msgstr ""
+
+#: front-page.php:212
+#: page.php:34
+#: single.php:44
+msgid "Pages:"
+msgstr ""
+
+#: inc/customizer.php:225
+msgid "Phone"
+msgstr ""
+
+#: footer.php:29
+msgid "Phone:"
+msgstr ""
+
+#: comments.php:76
+msgid "Post comment"
+msgstr ""
+
+#: single.php:69
+msgid "Post navigation"
+msgstr ""
+
+#: inc/customizer.php:224
+msgid "Postcode and city"
+msgstr ""
+
+#: inc/customizer.php:206
+msgid "Posts per page (front page)"
+msgstr ""
+
+#: front-page.php:109
+#: header.php:96
+msgid "Previous"
+msgstr ""
+
+#: search.php:62
+msgid "Previous results"
+msgstr ""
+
+#: inc/customizer.php:26
+msgid "Primary colour (navigation & footer)"
+msgstr ""
+
+#: inc/class-nabu-rss-widget.php:102
+msgid "RSS feed URL:"
+msgstr ""
+
+#: front-page.php:182
+msgid "Read more"
+msgstr ""
+
+#: single.php:37
+msgid "Read more<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content-none.php:18
+msgid "Ready to publish? <a href=\"%1$s\">Write your first post</a>."
+msgstr ""
+
+#: 404.php:31
+#: functions.php:231
+#: header.php:37
+#: search.php:87
+msgid "Search"
+msgstr ""
+
+#: 404.php:27
+#: header.php:31
+msgid "Search for..."
+msgstr ""
+
+#: search.php:19
+msgid "Search results for: %s"
+msgstr ""
+
+#: inc/template-tags.php:95
+msgid "Search: \"%s\""
+msgstr ""
+
+#: inc/class-nabu-rss-widget.php:128
+msgid "Show date"
+msgstr ""
+
+#: inc/customizer.php:218
+msgid "Shown in footer column 1 unless a widget is assigned."
+msgstr ""
+
+#: inc/customizer.php:248
+msgid "Shown in footer column 4 unless a widget is assigned."
+msgstr ""
+
+#: inc/class-nabu-rss-widget.php:18
+msgid "Shows the latest entries of an RSS feed. Can be used multiple times."
+msgstr ""
+
+#: functions.php:125
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:136
+msgid "Sidebar bottom (next to posts)"
+msgstr ""
+
+#: sidebar.php:10
+msgid "Sidebar navigation"
+msgstr ""
+
+#: sidebar-bottom.php:10
+msgid "Sidebar navigation bottom"
+msgstr ""
+
+#: functions.php:105
+msgid "Sidebar navigation bottom (next to posts)"
+msgstr ""
+
+#: functions.php:104
+msgid "Sidebar navigation top (next to the slider)"
+msgstr ""
+
+#: header.php:13
+msgid "Skip to content"
+msgstr ""
+
+#: front-page.php:108
+msgid "Slider navigation"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Social media"
+msgstr ""
+
+#: inc/customizer.php:223
+msgid "Street and house number"
+msgstr ""
+
+#: inc/template-tags.php:97
+msgid "Tag: %s"
+msgstr ""
+
+#: inc/template-tags.php:46
+msgid "Tags: %1$s"
+msgstr ""
+
+#: functions.php:80
+msgid "Text dark"
+msgstr ""
+
+#: inc/class-nabu-rss-widget.php:44
+msgid "The RSS feed could not be loaded: "
+msgstr ""
+
+#: 404.php:20
+msgid "The page you requested could not be found. It may have been moved or deleted."
+msgstr ""
+
+#: inc/customizer.php:147
+msgid "The slider on the front page automatically shows the latest posts that have a featured image. Set a featured image to include a post in the slider."
+msgstr ""
+
+#: 404.php:40
+msgid "To the home page"
+msgstr ""
+
+#: inc/customizer.php:195
+msgid "URL for the \"More news\" button"
+msgstr ""
+
+#: template-parts/content-none.php:27
+msgid "Unfortunately no results were found. Please try a different search term."
+msgstr ""
+
+#: inc/customizer.php:227
+msgid "Website URL"
+msgstr ""
+
+#: functions.php:75
+msgid "White"
+msgstr ""
+
+#: functions.php:160
+msgid "Widgets in footer area %d."
+msgstr ""
+
+#: functions.php:138
+msgid "Widgets in the right sidebar below the divider."
+msgstr ""
+
+#: functions.php:127
+msgid "Widgets in the right sidebar."
+msgstr ""
+
+#: comments.php:77
+msgid "Your email address will not be published."
+msgstr ""
+
+#: inc/template-tags.php:43
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: functions.php:406
+msgid "more"
+msgstr ""
+
+#: front-page.php:85
+#: functions.php:232
+msgid "more →"
+msgstr ""
+
+#: inc/template-tags.php:23
+msgctxt "post date"
+msgid "Published on %s"
+msgstr ""

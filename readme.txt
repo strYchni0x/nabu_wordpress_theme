@@ -1,14 +1,16 @@
 === NABU WordPress Theme ===
 
 Theme Name: NABU
-Version: 1.2.6
+Theme URI: https://github.com/strYchni0x/nabu_wordpress_theme
+Version: 1.2.7
 Author: Florian Willnat
 Author Email: florian@nabu-diepholz.de
-Requires at least: WordPress 5.9
+Requires at least: WordPress 5.8
+Tested up to: 6.9
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: nature, blue, green, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, footer-widgets
+Tags: blue, green, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, footer-widgets
 
 
 == Beschreibung ==
@@ -19,7 +21,7 @@ Das Theme basiert auf dem offiziellen NABU HTML-Design-Template (2017) und bring
 typischen NABU-Design-Elemente in WordPress:
 
 - NABU Farbschema (Blau #0068B4, Grün, Orange "Mitmachen")
-- Source Sans Pro Schriftart (Google Fonts)
+- Source Sans Pro Schriftart (lokal ausgeliefert, kein Google-Aufruf)
 - Responsive Bootstrap 4 Layout
 - Bildslider auf der Startseite (Carousel)
 - Neuigkeiten-Slider mit Slick
@@ -184,14 +186,103 @@ Tipp: Installieren Sie das Plugin "Regenerate Thumbnails" nach Theme-Aktivierung
 um vorhandene Bilder in den neuen Größen zu erstellen.
 
 
-== Enthaltene Bibliotheken ==
+== Sprache und Übersetzung ==
 
-- Bootstrap 4.0.0-alpha.5 | MIT License | https://getbootstrap.com
-- jQuery 3.1.1 | MIT License | https://jquery.com
-- Slick Carousel 1.6.0 | MIT License | http://kenwheeler.github.io/slick/
-- Font Awesome 4.7 | MIT + SIL OFL | http://fontawesome.io
+Die Quell-Strings im Code sind Englisch (WordPress-Konvention). Die deutsche
+Übersetzung liegt in languages/de_DE.po und languages/de_DE.mo und wird
+automatisch geladen, sobald WordPress auf Deutsch eingestellt ist – deutsche
+NABU-Gruppen sehen also durchgängig deutsche Beschriftungen.
 
-Google Fonts: Source Sans Pro (wird von Google geladen)
+Übersetzung anpassen: languages/de_DE.po mit Poedit öffnen, ändern und
+speichern (Poedit erzeugt die de_DE.mo automatisch mit).
+
+Neue Sprache anlegen: languages/nabu.pot als Vorlage verwenden und die
+fertige Übersetzung als languages/<locale>.mo ablegen, z. B. nl_NL.mo.
+Wichtig: Bei Themes lautet der Dateiname nur <locale>.mo, nicht
+nabu-<locale>.mo – Letzteres gilt nur für Plugins.
+
+
+== Copyright, Lizenzen und Quellen ==
+
+NABU WordPress Theme, Copyright (C) 2025-2026 Florian Willnat
+Lizenziert unter der GNU General Public License v2 or later.
+https://www.gnu.org/licenses/gpl-2.0.html
+
+Dieses Theme ist freie Software: Sie dürfen es weitergeben und/oder verändern
+unter den Bedingungen der GNU General Public License, Version 2 oder später.
+Es wird ohne jede Gewährleistung bereitgestellt.
+
+=== Enthaltene Bibliotheken ===
+
+Bootstrap (js/bootstrap.min.js, Teile von css/nabu.css)
+  Version 4.0.0-alpha.5
+  Copyright (C) 2011-2016 The Bootstrap Authors, Twitter Inc.
+  MIT License | https://opensource.org/licenses/MIT
+  Quelle: https://getbootstrap.com
+
+Slick Carousel (js/slick.min.js)
+  Version 1.6.0
+  Copyright (C) 2017 Ken Wheeler
+  MIT License | https://opensource.org/licenses/MIT
+  Quelle: http://kenwheeler.github.io/slick/
+
+Font Awesome (fonts/, Icon-Klassen in css/nabu.css)
+  Version 4.7.0
+  Copyright (C) 2017 Dave Gandy
+  Code: MIT License | https://opensource.org/licenses/MIT
+  Schriftdateien: SIL Open Font License 1.1 | https://scripts.sil.org/OFL
+  Quelle: https://fontawesome.com
+
+jQuery wird nicht mitgeliefert – das Theme nutzt die im WordPress-Kern
+enthaltene Version.
+
+=== Bekannte Einschränkung: Bootstrap-Version ===
+
+Das Theme nutzt Bootstrap 4.0.0-alpha.5, weil das mitgelieferte Stylesheet
+css/nabu.css gegen genau diese Vorabversion kompiliert wurde (erkennbar an
+.collapse.in und .navbar-toggleable-*). Ein Austausch nur der JavaScript-Datei
+gegen eine stabile 4.x-Version würde das mobile Menü unbrauchbar machen, da
+stabile Versionen die Klasse .show statt .in schalten.
+
+Ein Upgrade erfordert daher, nabu.css gegen Bootstrap 4.6 neu zu kompilieren
+und die Markup-Klassen anzupassen (navbar-toggleable-md -> navbar-expand-lg,
+hidden-md-down -> d-lg-none usw.).
+
+Sicherheitseinschätzung: Die bekannten XSS-Schwachstellen in Bootstrap 4
+(u. a. CVE-2018-14041) betreffen die Komponenten Tooltip, Popover und
+Scrollspy. Diese werden vom Theme nicht verwendet – genutzt werden
+ausschließlich Collapse, Carousel und Tab.
+
+=== Schriftarten ===
+
+Source Sans Pro (fonts/source-sans-pro/, eingebunden über css/fonts.css)
+  Copyright (C) 2010-2020 Adobe Systems Incorporated
+  SIL Open Font License 1.1 | https://scripts.sil.org/OFL
+  Lizenztext: fonts/source-sans-pro/LICENSE.md
+  Quelle: https://fonts.google.com/specimen/Source+Sans+Pro
+
+  Die Schriftdateien werden vom eigenen Server ausgeliefert (latin und
+  latin-ext, je Regular/Italic/Bold/Bold-Italic als woff2). Es findet kein
+  Verbindungsaufbau zu Google statt – relevant für die DSGVO-Konformität
+  der NABU-Gruppen-Websites.
+
+=== Bilder ===
+
+img/list-point2.png, img/logo-default.jpg
+  Copyright (C) 2025 Florian Willnat
+  GNU General Public License v2 or later
+
+screenshot.png
+  Copyright (C) 2025 Florian Willnat
+  GNU General Public License v2 or later
+
+=== Design-Vorlage ===
+
+Das Stylesheet css/nabu.css basiert auf dem HTML-Design-Template des
+NABU (Naturschutzbund Deutschland e.V., 2017). "NABU" ist eine
+eingetragene Marke des Naturschutzbund Deutschland e.V.; das Theme steht
+in keiner offiziellen Verbindung zum Bundesverband. Die Nutzung von Name
+und Design setzt eine Abstimmung mit dem NABU voraus.
 
 
 == Anpassungen für Entwickler ==
@@ -222,9 +313,14 @@ Für eigene Anpassungen erstellen Sie ein Child Theme:
    /*
    Theme Name: NABU Child
    Template: nabu-theme
+   Version: 1.0.0
    */
-   @import url("../nabu-theme/style.css");
-3. functions.php für eigene PHP-Anpassungen
+3. functions.php mit folgendem Inhalt (@import ist veraltet und langsam):
+   <?php
+   add_action( 'wp_enqueue_scripts', function() {
+       wp_enqueue_style( 'nabu-parent-style', get_template_directory_uri() . '/style.css' );
+   } );
+4. Eigene PHP-Anpassungen ebenfalls in die functions.php des Child Themes
 
 
 == Autor ==
@@ -235,6 +331,29 @@ Web: https://www.nabu-diepholz.de
 
 
 == Changelog ==
+
+= 1.2.7 =
+* Source Sans Pro wird jetzt lokal ausgeliefert (fonts/source-sans-pro/, neue
+  css/fonts.css) statt von Google Fonts geladen – behebt das DSGVO-Problem;
+  betrifft Frontend und Block-Editor (@import in editor-style.css entfernt)
+* jQuery wird nicht mehr mitgeliefert und nicht mehr deregistriert – das Theme
+  nutzt jetzt die jQuery-Version aus dem WordPress-Kern (js/jquery-3.1.1.min.js entfernt)
+* i18n: alle Quell-Strings im Code auf Englisch umgestellt (WordPress-Konvention),
+  deutsche Übersetzung wird als languages/de_DE.po und de_DE.mo mitgeliefert –
+  die Oberfläche bleibt für deutsche Installationen unverändert deutsch
+* Übersetzungsvorlage languages/nabu.pot ergänzt (135 Strings)
+* Bugfix i18n: Die elf Feldbeschriftungen der Customizer-Abschnitte "Footer –
+  Adresse & Kontakt" und "Footer – Spendenkonto" wurden über eine Variable an
+  esc_html__() übergeben (esc_html__( $field['label'] )) und waren dadurch
+  überhaupt nicht übersetzbar – Beschriftungen jetzt direkt im Array übersetzt
+* Bugfix i18n: Die Tab-Überschrift auf der Startseite war aus drei Fragmenten
+  ("Aktuelle" + "s" + "Meldungen") zusammengesetzt und damit nicht sinnvoll
+  übersetzbar – jetzt zwei vollständige Strings für schmale und breite Ansicht
+* README.txt in readme.txt umbenannt (WordPress-Konvention)
+* Vollständiger Copyright- und Lizenznachweis für alle enthaltenen Bibliotheken,
+  Schriften und Bilder ergänzt
+* style.css: Theme-Beschreibung auf Englisch, gültige Theme URI, ungültiges Tag
+  "nature" entfernt, "Tested up to" auf 6.9 angehoben
 
 = 1.2.6 =
 * Zweite Sidebar-Navigation unterhalb der horizontalen Trennlinie hinzugefügt

@@ -20,7 +20,7 @@ function nabu_posted_on() {
 
 	$posted_on = sprintf(
 		/* translators: %s: Veröffentlichungsdatum */
-		esc_html_x( 'Veröffentlicht am %s', 'post date', 'nabu' ),
+		esc_html_x( 'Published on %s', 'post date', 'nabu' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -35,7 +35,7 @@ function nabu_entry_footer() {
 		$categories_list = get_the_category_list( esc_html__( ', ', 'nabu' ) );
 		if ( $categories_list ) {
 			printf(
-				'<span class="cat-links">' . esc_html__( 'Kategorien: %1$s', 'nabu' ) . '</span>',
+				'<span class="cat-links">' . esc_html__( 'Categories: %1$s', 'nabu' ) . '</span>',
 				$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			);
 		}
@@ -43,7 +43,7 @@ function nabu_entry_footer() {
 		$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'nabu' ) );
 		if ( $tags_list ) {
 			printf(
-				'<span class="tags-links"> &middot; ' . esc_html__( 'Schlagwörter: %1$s', 'nabu' ) . '</span>',
+				'<span class="tags-links"> &middot; ' . esc_html__( 'Tags: %1$s', 'nabu' ) . '</span>',
 				$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			);
 		}
@@ -54,7 +54,7 @@ function nabu_entry_footer() {
 		comments_popup_link(
 			sprintf(
 				wp_kses(
-					__( 'Kommentieren <span class="screen-reader-text">für %s</span>', 'nabu' ),
+					__( 'Leave a comment <span class="screen-reader-text">on %s</span>', 'nabu' ),
 					array( 'span' => array( 'class' => array() ) )
 				),
 				wp_kses_post( get_the_title() )
@@ -92,15 +92,15 @@ function nabu_breadcrumb() {
 		}
 		echo '<li class="breadcrumb-item active">' . esc_html( get_the_title() ) . '</li>';
 	} elseif ( is_search() ) {
-		echo '<li class="breadcrumb-item active">' . sprintf( esc_html__( 'Suche: "%s"', 'nabu' ), esc_html( get_search_query() ) ) . '</li>';
+		echo '<li class="breadcrumb-item active">' . sprintf( esc_html__( 'Search: "%s"', 'nabu' ), esc_html( get_search_query() ) ) . '</li>';
 	} elseif ( is_tag() ) {
-		echo '<li class="breadcrumb-item active">' . sprintf( esc_html__( 'Schlagwort: %s', 'nabu' ), single_tag_title( '', false ) ) . '</li>';
+		echo '<li class="breadcrumb-item active">' . sprintf( esc_html__( 'Tag: %s', 'nabu' ), single_tag_title( '', false ) ) . '</li>';
 	} elseif ( is_author() ) {
-		echo '<li class="breadcrumb-item active">' . sprintf( esc_html__( 'Autor: %s', 'nabu' ), esc_html( get_the_author() ) ) . '</li>';
+		echo '<li class="breadcrumb-item active">' . sprintf( esc_html__( 'Author: %s', 'nabu' ), esc_html( get_the_author() ) ) . '</li>';
 	} elseif ( is_archive() ) {
 		echo '<li class="breadcrumb-item active">' . esc_html( get_the_archive_title() ) . '</li>';
 	} elseif ( is_404() ) {
-		echo '<li class="breadcrumb-item active">' . esc_html__( 'Seite nicht gefunden', 'nabu' ) . '</li>';
+		echo '<li class="breadcrumb-item active">' . esc_html__( 'Page not found', 'nabu' ) . '</li>';
 	}
 
 	echo '</ol>';
@@ -149,7 +149,7 @@ function nabu_main_navigation() {
  */
 function nabu_default_main_nav() {
 	echo '<ul class="nav navbar-nav">';
-	echo '<li class="nav-item"><a class="nav-link" href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Startseite', 'nabu' ) . '</a></li>';
+	echo '<li class="nav-item"><a class="nav-link" href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'nabu' ) . '</a></li>';
 	wp_list_pages( array(
 		'title_li' => '',
 		'before'   => '<li class="nav-item">',

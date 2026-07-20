@@ -17,7 +17,7 @@ get_header();
 			// Mobile Sidebar-Menü-Toggle
 			if ( has_nav_menu( 'sidebar-nav' ) ) :
 			?>
-			<a href="#mobilenavleft" class="hidden-sm-up mobilenavleft" aria-label="<?php esc_attr_e( 'Menü öffnen', 'nabu' ); ?>">
+			<a href="#mobilenavleft" class="hidden-sm-up mobilenavleft" aria-label="<?php esc_attr_e( 'Open menu', 'nabu' ); ?>">
 				<i class="fa fa-bars" aria-hidden="true"></i>
 			</a>
 			<?php endif; ?>
@@ -31,7 +31,7 @@ get_header();
 						role="tab"
 						aria-controls="aktuelles"
 						aria-selected="true">
-						<?php esc_html_e( 'Aktuelle', 'nabu' ); ?><span class="hidden-sm-up"><?php esc_html_e( 's', 'nabu' ); ?></span><span class="hidden-sm-down"> <?php esc_html_e( 'Meldungen', 'nabu' ); ?></span>
+						<span class="hidden-sm-up"><?php esc_html_e( 'News', 'nabu' ); ?></span><span class="hidden-sm-down"><?php esc_html_e( 'Latest news', 'nabu' ); ?></span>
 					</a>
 				</li>
 				<?php if ( get_theme_mod( 'nabu_social_youtube', '' ) ) : ?>
@@ -82,7 +82,7 @@ get_header();
 								<p>
 									<?php echo wp_trim_words( get_the_excerpt(), 20, ' [&hellip;]' ); ?>
 									<a href="<?php the_permalink(); ?>" role="button">
-										<?php esc_html_e( 'mehr →', 'nabu' ); ?>
+										<?php esc_html_e( 'more →', 'nabu' ); ?>
 									</a>
 								</p>
 							</div>
@@ -103,13 +103,13 @@ get_header();
 								}
 								?>
 								<a href="<?php echo esc_url( $more_url ); ?>" class="btn btn-secondary">
-									<?php esc_html_e( 'Weitere Meldungen im Überblick', 'nabu' ); ?> &rarr;
+									<?php esc_html_e( 'More news at a glance', 'nabu' ); ?> &rarr;
 								</a>
-								<div class="btn-group" role="group" aria-label="<?php esc_attr_e( 'Slider Navigation', 'nabu' ); ?>">
-									<button class="btn btn-secondary" id="slickleft" aria-label="<?php esc_attr_e( 'Zurück', 'nabu' ); ?>">
+								<div class="btn-group" role="group" aria-label="<?php esc_attr_e( 'Slider navigation', 'nabu' ); ?>">
+									<button class="btn btn-secondary" id="slickleft" aria-label="<?php esc_attr_e( 'Previous', 'nabu' ); ?>">
 										<i class="fa fa-arrow-left" aria-hidden="true"></i>
 									</button>
-									<button class="btn btn-secondary" id="slickright" aria-label="<?php esc_attr_e( 'Weiter', 'nabu' ); ?>">
+									<button class="btn btn-secondary" id="slickright" aria-label="<?php esc_attr_e( 'Next', 'nabu' ); ?>">
 										<i class="fa fa-arrow-right" aria-hidden="true"></i>
 									</button>
 								</div>
@@ -124,7 +124,7 @@ get_header();
 							<p>&nbsp;</p>
 							<a href="<?php echo esc_url( get_theme_mod( 'nabu_social_youtube' ) ); ?>" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
 								<i class="fa fa-youtube" aria-hidden="true"></i>
-								<?php esc_html_e( 'Unser YouTube-Kanal', 'nabu' ); ?>
+								<?php esc_html_e( 'Our YouTube channel', 'nabu' ); ?>
 							</a>
 						</div>
 					</div>
@@ -137,7 +137,7 @@ get_header();
 							<p>&nbsp;</p>
 							<a href="<?php echo esc_url( get_theme_mod( 'nabu_social_facebook' ) ); ?>" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
 								<i class="fa fa-facebook" aria-hidden="true"></i>
-								<?php esc_html_e( 'Unsere Facebook-Seite', 'nabu' ); ?>
+								<?php esc_html_e( 'Our Facebook page', 'nabu' ); ?>
 							</a>
 						</div>
 					</div>
@@ -179,7 +179,7 @@ get_header();
 							echo wp_trim_words(
 								get_the_content(),
 								150,
-								'&hellip; <a href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Weiterlesen', 'nabu' ) . ' &rarr;</a>'
+								'&hellip; <a href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read more', 'nabu' ) . ' &rarr;</a>'
 							);
 						?></p>
 					</div>
@@ -209,7 +209,7 @@ get_header();
 					<?php the_content(); ?>
 					<?php
 					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html__( 'Seiten:', 'nabu' ),
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'nabu' ),
 						'after'  => '</div>',
 					) );
 					?>

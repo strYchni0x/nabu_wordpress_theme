@@ -34,14 +34,14 @@ get_header();
 						<?php
 						the_content( sprintf(
 							wp_kses(
-								__( 'Weiterlesen<span class="screen-reader-text"> "%s"</span>', 'nabu' ),
+								__( 'Read more<span class="screen-reader-text"> "%s"</span>', 'nabu' ),
 								array( 'span' => array( 'class' => array() ) )
 							),
 							wp_kses_post( get_the_title() )
 						) );
 
 						wp_link_pages( array(
-							'before' => '<div class="page-links">' . esc_html__( 'Seiten:', 'nabu' ),
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'nabu' ),
 							'after'  => '</div>',
 						) );
 						?>
@@ -53,7 +53,7 @@ get_header();
 						edit_post_link(
 							sprintf(
 								wp_kses(
-									__( 'Beitrag bearbeiten <span class="screen-reader-text">"%s"</span>', 'nabu' ),
+									__( 'Edit post <span class="screen-reader-text">"%s"</span>', 'nabu' ),
 									array( 'span' => array( 'class' => array() ) )
 								),
 								wp_kses_post( get_the_title() )
@@ -66,7 +66,7 @@ get_header();
 				</article>
 
 				<!-- Vorheriger / Nächster Beitrag -->
-				<nav class="navigation post-navigation" aria-label="<?php esc_attr_e( 'Beitragsnavigation', 'nabu' ); ?>">
+				<nav class="navigation post-navigation" aria-label="<?php esc_attr_e( 'Post navigation', 'nabu' ); ?>">
 					<div class="nav-links">
 						<?php
 						previous_post_link( '<div class="nav-previous">%link</div>', '&larr; %title' );

@@ -13,9 +13,9 @@ class Nabu_RSS_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'nabu_rss_feed',
-			esc_html__( 'NABU RSS-Feed', 'nabu' ),
+			esc_html__( 'NABU RSS feed', 'nabu' ),
 			array(
-				'description' => esc_html__( 'Zeigt die neuesten Beiträge eines RSS-Feeds an. Mehrfach verwendbar.', 'nabu' ),
+				'description' => esc_html__( 'Shows the latest entries of an RSS feed. Can be used multiple times.', 'nabu' ),
 				'classname'   => 'nabu-rss-widget',
 			)
 		);
@@ -26,7 +26,7 @@ class Nabu_RSS_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		$feed_url  = ! empty( $instance['feed_url'] ) ? esc_url_raw( $instance['feed_url'] ) : '';
-		$title     = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Aktuelle Nachrichten', 'nabu' );
+		$title     = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Current news', 'nabu' );
 		$num_items = ! empty( $instance['num_items'] ) ? absint( $instance['num_items'] ) : 3;
 		$num_items = max( 1, min( 5, $num_items ) );
 		$show_date = ! empty( $instance['show_date'] );
@@ -41,7 +41,7 @@ class Nabu_RSS_Widget extends WP_Widget {
 			if ( current_user_can( 'manage_options' ) ) {
 				echo $args['before_widget'];
 				echo '<p style="color:#c0392b;font-size:0.85em;">';
-				echo esc_html__( 'RSS-Feed konnte nicht geladen werden: ', 'nabu' );
+				echo esc_html__( 'The RSS feed could not be loaded: ', 'nabu' );
 				echo esc_html( $feed->get_error_message() );
 				echo '</p>';
 				echo $args['after_widget'];
@@ -89,7 +89,7 @@ class Nabu_RSS_Widget extends WP_Widget {
 		?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
-				<?php esc_html_e( 'Titel des Kastens:', 'nabu' ); ?>
+				<?php esc_html_e( 'Box title:', 'nabu' ); ?>
 			</label>
 			<input class="widefat"
 				id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
@@ -99,7 +99,7 @@ class Nabu_RSS_Widget extends WP_Widget {
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'feed_url' ) ); ?>">
-				<?php esc_html_e( 'RSS-Feed URL:', 'nabu' ); ?>
+				<?php esc_html_e( 'RSS feed URL:', 'nabu' ); ?>
 			</label>
 			<input class="widefat"
 				id="<?php echo esc_attr( $this->get_field_id( 'feed_url' ) ); ?>"
@@ -110,7 +110,7 @@ class Nabu_RSS_Widget extends WP_Widget {
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'num_items' ) ); ?>">
-				<?php esc_html_e( 'Anzahl Einträge (1–5):', 'nabu' ); ?>
+				<?php esc_html_e( 'Number of entries (1–5):', 'nabu' ); ?>
 			</label>
 			<input class="tiny-text"
 				id="<?php echo esc_attr( $this->get_field_id( 'num_items' ) ); ?>"
@@ -125,7 +125,7 @@ class Nabu_RSS_Widget extends WP_Widget {
 				type="checkbox" value="1"
 				<?php checked( $show_date ); ?>>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'show_date' ) ); ?>">
-				<?php esc_html_e( 'Datum anzeigen', 'nabu' ); ?>
+				<?php esc_html_e( 'Show date', 'nabu' ); ?>
 			</label>
 		</p>
 		<?php

@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme-Konstanten
-define( 'NABU_VERSION', '1.2.6' );
+define( 'NABU_VERSION', '1.2.7' );
 define( 'NABU_DIR', get_template_directory() );
 define( 'NABU_URI', get_template_directory_uri() );
 
@@ -43,41 +43,41 @@ function nabu_setup() {
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'editor-styles' );
-	add_editor_style( 'editor-style.css' );
+	add_editor_style( array( 'css/fonts.css', 'editor-style.css' ) );
 
 	add_theme_support( 'editor-color-palette', array(
 		array(
-			'name'  => esc_html__( 'NABU Blau', 'nabu' ),
+			'name'  => esc_html__( 'NABU blue', 'nabu' ),
 			'slug'  => 'nabu-blau',
 			'color' => '#0068B4',
 		),
 		array(
-			'name'  => esc_html__( 'NABU Dunkelblau', 'nabu' ),
+			'name'  => esc_html__( 'NABU dark blue', 'nabu' ),
 			'slug'  => 'nabu-dunkelblau',
 			'color' => '#003c68',
 		),
 		array(
-			'name'  => esc_html__( 'NABU Grün', 'nabu' ),
+			'name'  => esc_html__( 'NABU green', 'nabu' ),
 			'slug'  => 'nabu-gruen',
 			'color' => '#76b828',
 		),
 		array(
-			'name'  => esc_html__( 'NABU Orange', 'nabu' ),
+			'name'  => esc_html__( 'NABU orange', 'nabu' ),
 			'slug'  => 'nabu-orange',
 			'color' => '#ef7c00',
 		),
 		array(
-			'name'  => esc_html__( 'Hintergrund Beige', 'nabu' ),
+			'name'  => esc_html__( 'Background beige', 'nabu' ),
 			'slug'  => 'nabu-hintergrund',
 			'color' => '#e3e2d4',
 		),
 		array(
-			'name'  => esc_html__( 'Weiß', 'nabu' ),
+			'name'  => esc_html__( 'White', 'nabu' ),
 			'slug'  => 'nabu-weiss',
 			'color' => '#ffffff',
 		),
 		array(
-			'name'  => esc_html__( 'Text Dunkel', 'nabu' ),
+			'name'  => esc_html__( 'Text dark', 'nabu' ),
 			'slug'  => 'nabu-text',
 			'color' => '#333333',
 		),
@@ -99,11 +99,11 @@ function nabu_setup() {
 
 	// Navigationsmenüs registrieren
 	register_nav_menus( array(
-		'meta-nav'           => esc_html__( 'Meta-Navigation (oben rechts)', 'nabu' ),
-		'main-nav'           => esc_html__( 'Haupt-Navigation (blaue Leiste)', 'nabu' ),
-		'sidebar-nav'        => esc_html__( 'Sidebar-Navigation oben (neben Slider)', 'nabu' ),
-		'sidebar-nav-bottom' => esc_html__( 'Sidebar-Navigation unten (neben Beiträgen)', 'nabu' ),
-		'footer-nav'         => esc_html__( 'Footer-Navigation', 'nabu' ),
+		'meta-nav'           => esc_html__( 'Meta navigation (top right)', 'nabu' ),
+		'main-nav'           => esc_html__( 'Main navigation (blue bar)', 'nabu' ),
+		'sidebar-nav'        => esc_html__( 'Sidebar navigation top (next to the slider)', 'nabu' ),
+		'sidebar-nav-bottom' => esc_html__( 'Sidebar navigation bottom (next to posts)', 'nabu' ),
+		'footer-nav'         => esc_html__( 'Footer navigation', 'nabu' ),
 	) );
 }
 add_action( 'after_setup_theme', 'nabu_setup' );
@@ -124,7 +124,7 @@ function nabu_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'nabu' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Widgets in der rechten Seitenleiste.', 'nabu' ),
+		'description'   => esc_html__( 'Widgets in the right sidebar.', 'nabu' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -133,9 +133,9 @@ function nabu_widgets_init() {
 
 	// Sidebar unten (neben Beiträgen)
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar unten (neben Beiträgen)', 'nabu' ),
+		'name'          => esc_html__( 'Sidebar bottom (next to posts)', 'nabu' ),
 		'id'            => 'sidebar-2',
-		'description'   => esc_html__( 'Widgets in der rechten Seitenleiste unterhalb der Trennlinie.', 'nabu' ),
+		'description'   => esc_html__( 'Widgets in the right sidebar below the divider.', 'nabu' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -147,17 +147,17 @@ function nabu_widgets_init() {
 
 	// Footer-Bereiche (4 Spalten)
 	$footer_labels = array(
-		1 => esc_html__( 'Footer: Adresse & Kontakt', 'nabu' ),
-		2 => esc_html__( 'Footer: Spalte 2', 'nabu' ),
-		3 => esc_html__( 'Footer: Spalte 3', 'nabu' ),
-		4 => esc_html__( 'Footer: Spendenkonto', 'nabu' ),
+		1 => esc_html__( 'Footer: address & contact', 'nabu' ),
+		2 => esc_html__( 'Footer: column 2', 'nabu' ),
+		3 => esc_html__( 'Footer: column 3', 'nabu' ),
+		4 => esc_html__( 'Footer: donation account', 'nabu' ),
 	);
 
 	foreach ( $footer_labels as $i => $label ) {
 		register_sidebar( array(
 			'name'          => $label,
 			'id'            => 'footer-' . $i,
-			'description'   => sprintf( esc_html__( 'Widgets im %d. Footer-Bereich.', 'nabu' ), $i ),
+			'description'   => sprintf( esc_html__( 'Widgets in footer area %d.', 'nabu' ), $i ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h5>',
@@ -171,12 +171,12 @@ add_action( 'widgets_init', 'nabu_widgets_init' );
  * Skripte und Stile einbinden
  */
 function nabu_scripts() {
-	// Google Fonts: Source Sans Pro
+	// Source Sans Pro - lokal ausgeliefert, kein Aufruf an Google (Datenschutz)
 	wp_enqueue_style(
 		'nabu-fonts',
-		'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic&subset=latin',
+		NABU_URI . '/css/fonts.css',
 		array(),
-		null
+		NABU_VERSION
 	);
 
 	// Haupt-CSS (originales NABU CSS)
@@ -195,9 +195,7 @@ function nabu_scripts() {
 		NABU_VERSION
 	);
 
-	// jQuery (Bootstrap 4 alpha benötigt eine spezifische Version)
-	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', NABU_URI . '/js/jquery-3.1.1.min.js', array(), '3.1.1', false );
+	// jQuery aus dem WordPress-Kern (nicht ersetzen – siehe README, Abschnitt Bibliotheken)
 	wp_enqueue_script( 'jquery' );
 
 	// Bootstrap 4 alpha
@@ -230,8 +228,8 @@ function nabu_scripts() {
 	// Daten an nabu.js übergeben
 	wp_localize_script( 'nabu-js', 'nabuVars', array(
 		'homeUrl'           => esc_url( home_url( '/' ) ),
-		'searchLabel'       => esc_html__( 'Suche', 'nabu' ),
-		'moreLabel'         => esc_html__( 'mehr →', 'nabu' ),
+		'searchLabel'       => esc_html__( 'Search', 'nabu' ),
+		'moreLabel'         => esc_html__( 'more →', 'nabu' ),
 	) );
 
 	// Kommentar-Script wenn nötig
@@ -371,22 +369,22 @@ add_filter( 'body_class', 'nabu_body_classes' );
 function nabu_register_block_styles() {
 	register_block_style( 'core/button', array(
 		'name'  => 'nabu-mitmachen',
-		'label' => esc_html__( 'Mitmachen (Orange)', 'nabu' ),
+		'label' => esc_html__( 'Get involved (orange)', 'nabu' ),
 	) );
 
 	register_block_style( 'core/quote', array(
 		'name'  => 'nabu-hervorhebung',
-		'label' => esc_html__( 'NABU Hervorhebung', 'nabu' ),
+		'label' => esc_html__( 'NABU highlight', 'nabu' ),
 	) );
 
 	register_block_style( 'core/separator', array(
 		'name'  => 'nabu',
-		'label' => esc_html__( 'NABU Blau', 'nabu' ),
+		'label' => esc_html__( 'NABU blue', 'nabu' ),
 	) );
 
 	register_block_style( 'core/image', array(
 		'name'  => 'nabu-teaser',
-		'label' => esc_html__( 'NABU Teaser', 'nabu' ),
+		'label' => esc_html__( 'NABU teaser', 'nabu' ),
 	) );
 }
 add_action( 'init', 'nabu_register_block_styles' );
@@ -405,7 +403,7 @@ add_action( 'pre_get_posts', 'nabu_posts_per_page_filter' );
  * Archiv-Beschreibung vor dem Inhalt
  */
 function nabu_excerpt_more( $more ) {
-	return ' [&hellip;] <a href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'mehr', 'nabu' ) . '</a>';
+	return ' [&hellip;] <a href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'more', 'nabu' ) . '</a>';
 }
 add_filter( 'excerpt_more', 'nabu_excerpt_more' );
 

@@ -9,7 +9,7 @@
 				<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
 					<?php dynamic_sidebar( 'footer-1' ); ?>
 				<?php else : ?>
-					<h5><?php esc_html_e( 'Adresse & Kontakt', 'nabu' ); ?></h5>
+					<h5><?php esc_html_e( 'Address & contact', 'nabu' ); ?></h5>
 					<?php
 					$org     = get_theme_mod( 'nabu_footer_org_name' );
 					$street  = get_theme_mod( 'nabu_footer_street' );
@@ -26,7 +26,7 @@
 						</address>
 					<?php endif; ?>
 					<?php if ( $phone ) : ?>
-						<p><?php esc_html_e( 'Tel.:', 'nabu' ); ?> <?php echo esc_html( $phone ); ?></p>
+						<p><?php esc_html_e( 'Phone:', 'nabu' ); ?> <?php echo esc_html( $phone ); ?></p>
 					<?php endif; ?>
 					<?php if ( $email ) : ?>
 						<p><a href="mailto:<?php echo esc_attr( antispambot( $email ) ); ?>"><?php echo esc_html( antispambot( $email ) ); ?></a></p>
@@ -73,7 +73,7 @@
 				<?php if ( is_active_sidebar( 'footer-4' ) ) : ?>
 					<?php dynamic_sidebar( 'footer-4' ); ?>
 				<?php else : ?>
-					<h5><?php esc_html_e( 'Spendenkonto', 'nabu' ); ?></h5>
+					<h5><?php esc_html_e( 'Donation account', 'nabu' ); ?></h5>
 					<?php
 					$holder = get_theme_mod( 'nabu_footer_donation_holder' );
 					$bank   = get_theme_mod( 'nabu_footer_donation_bank' );
@@ -84,7 +84,7 @@
 					if ( $holder || $bank || $iban || $bic ) : ?>
 						<table class="footer-donation-table">
 							<?php if ( $holder ) : ?>
-								<tr><th><?php esc_html_e( 'Kontoinhaber', 'nabu' ); ?>:</th><td><?php echo esc_html( $holder ); ?></td></tr>
+								<tr><th><?php esc_html_e( 'Account holder', 'nabu' ); ?>:</th><td><?php echo esc_html( $holder ); ?></td></tr>
 							<?php endif; ?>
 							<?php if ( $bank ) : ?>
 								<tr><th><?php esc_html_e( 'Bank', 'nabu' ); ?>:</th><td><?php echo esc_html( $bank ); ?></td></tr>
@@ -111,7 +111,7 @@
 	</div><!-- .container -->
 </footer>
 
-<nav id="mobilenavleft" class="hidden-md-up" aria-label="<?php esc_attr_e( 'Mobile Sidebar-Navigation', 'nabu' ); ?>"></nav>
+<nav id="mobilenavleft" class="hidden-md-up" aria-label="<?php esc_attr_e( 'Mobile sidebar navigation', 'nabu' ); ?>"></nav>
 
 <?php wp_footer(); ?>
 </body>

@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<a class="skip-link screen-reader-text" href="#main-content"><?php esc_html_e( 'Zum Inhalt springen', 'nabu' ); ?></a>
+<a class="skip-link screen-reader-text" href="#main-content"><?php esc_html_e( 'Skip to content', 'nabu' ); ?></a>
 
 <div class="header">
 	<div class="container">
@@ -22,19 +22,19 @@
 
 		<div class="header-content">
 			<!-- Meta-Navigation (oben rechts) + Suche -->
-			<nav class="nav metanav hidden-md-down" aria-label="<?php esc_attr_e( 'Meta-Navigation', 'nabu' ); ?>">
+			<nav class="nav metanav hidden-md-down" aria-label="<?php esc_attr_e( 'Meta navigation', 'nabu' ); ?>">
 				<?php nabu_meta_navigation(); ?>
 				<form class="form-inline" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<div class="input-group">
 						<input type="search"
 							class="form-control"
-							placeholder="<?php esc_attr_e( 'Suche nach...', 'nabu' ); ?>"
+							placeholder="<?php esc_attr_e( 'Search for...', 'nabu' ); ?>"
 							value="<?php echo esc_attr( get_search_query() ); ?>"
 							name="s"
-							title="<?php esc_attr_e( 'Suchbegriff eingeben', 'nabu' ); ?>">
+							title="<?php esc_attr_e( 'Enter a search term', 'nabu' ); ?>">
 						<span class="input-group-btn">
 							<button class="btn btn-primary" type="submit">
-								<?php esc_html_e( 'Suchen', 'nabu' ); ?>
+								<?php esc_html_e( 'Search', 'nabu' ); ?>
 							</button>
 						</span>
 					</div>
@@ -42,7 +42,7 @@
 			</nav>
 
 			<!-- Blaue Leiste (ohne Navigation) -->
-			<nav class="navbar navbar-dark bg-primary" aria-label="<?php esc_attr_e( 'Haupt-Navigation', 'nabu' ); ?>">
+			<nav class="navbar navbar-dark bg-primary" aria-label="<?php esc_attr_e( 'Main navigation', 'nabu' ); ?>">
 			</nav>
 		</div><!-- .header-content -->
 
@@ -50,7 +50,7 @@
 			<?php
 			// Carousel nur auf der Startseite
 			$carousel_count = absint( get_theme_mod( 'nabu_carousel_count', 3 ) );
-			$carousel_cta   = get_theme_mod( 'nabu_carousel_cta', esc_html__( 'Mehr erfahren', 'nabu' ) );
+			$carousel_cta   = get_theme_mod( 'nabu_carousel_cta', esc_html__( 'Learn more', 'nabu' ) );
 			$carousel_args  = array(
 				'post_type'      => 'post',
 				'posts_per_page' => $carousel_count,
@@ -60,7 +60,7 @@
 			$carousel_query = new WP_Query( $carousel_args );
 			if ( $carousel_query->have_posts() ) :
 			?>
-			<div id="nabu-carousel" class="carousel slide" data-ride="carousel" aria-label="<?php esc_attr_e( 'Bildslider', 'nabu' ); ?>">
+			<div id="nabu-carousel" class="carousel slide" data-ride="carousel" aria-label="<?php esc_attr_e( 'Image slider', 'nabu' ); ?>">
 				<ol class="carousel-indicators">
 					<?php $ci = 0; while ( $carousel_query->have_posts() ) : $carousel_query->the_post(); ?>
 					<li data-target="#nabu-carousel"
@@ -93,11 +93,11 @@
 
 				<a class="left carousel-control" href="#nabu-carousel" role="button" data-slide="prev">
 					<span class="icon-prev" aria-hidden="true"><i class="fa fa-arrow-left"></i></span>
-					<span class="sr-only"><?php esc_html_e( 'Zurück', 'nabu' ); ?></span>
+					<span class="sr-only"><?php esc_html_e( 'Previous', 'nabu' ); ?></span>
 				</a>
 				<a class="right carousel-control" href="#nabu-carousel" role="button" data-slide="next">
 					<span class="icon-next" aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
-					<span class="sr-only"><?php esc_html_e( 'Weiter', 'nabu' ); ?></span>
+					<span class="sr-only"><?php esc_html_e( 'Next', 'nabu' ); ?></span>
 				</a>
 			</div><!-- #nabu-carousel -->
 			<?php endif; // carousel_query->have_posts() ?>

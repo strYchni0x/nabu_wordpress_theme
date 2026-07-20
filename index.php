@@ -15,7 +15,7 @@ get_header();
 
 				<?php if ( is_home() && ! is_front_page() ) : ?>
 				<header class="page-header">
-					<h2 class="page-title"><?php esc_html_e( 'Aktuelle Meldungen', 'nabu' ); ?></h2>
+					<h2 class="page-title"><?php esc_html_e( 'Latest news', 'nabu' ); ?></h2>
 				</header>
 				<?php endif; ?>
 
@@ -53,8 +53,8 @@ get_header();
 					<?php
 					the_posts_pagination( array(
 						'mid_size'  => 2,
-						'prev_text' => '&larr; ' . esc_html__( 'Neuere Beiträge', 'nabu' ),
-						'next_text' => esc_html__( 'Ältere Beiträge', 'nabu' ) . ' &rarr;',
+						'prev_text' => '&larr; ' . esc_html__( 'Newer posts', 'nabu' ),
+						'next_text' => esc_html__( 'Older posts', 'nabu' ) . ' &rarr;',
 					) );
 					?>
 				</div>

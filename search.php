@@ -16,7 +16,7 @@ get_header();
 					<h2 class="page-title">
 						<?php
 						printf(
-							esc_html__( 'Suchergebnisse für: %s', 'nabu' ),
+							esc_html__( 'Search results for: %s', 'nabu' ),
 							'<em>' . esc_html( get_search_query() ) . '</em>'
 						);
 						?>
@@ -59,8 +59,8 @@ get_header();
 				<?php
 				the_posts_pagination( array(
 					'mid_size'  => 2,
-					'prev_text' => '&larr; ' . esc_html__( 'Vorherige Ergebnisse', 'nabu' ),
-					'next_text' => esc_html__( 'Nächste Ergebnisse', 'nabu' ) . ' &rarr;',
+					'prev_text' => '&larr; ' . esc_html__( 'Previous results', 'nabu' ),
+					'next_text' => esc_html__( 'Next results', 'nabu' ) . ' &rarr;',
 				) );
 				?>
 
@@ -69,7 +69,7 @@ get_header();
 				<p class="lead">
 					<?php
 					printf(
-						esc_html__( 'Für "%s" wurden keine Ergebnisse gefunden. Bitte versuchen Sie einen anderen Suchbegriff.', 'nabu' ),
+						esc_html__( 'No results were found for "%s". Please try a different search term.', 'nabu' ),
 						'<em>' . esc_html( get_search_query() ) . '</em>'
 					);
 					?>
@@ -79,12 +79,12 @@ get_header();
 					<div class="input-group">
 						<input type="search"
 							class="form-control"
-							placeholder="<?php esc_attr_e( 'Suchbegriff eingeben...', 'nabu' ); ?>"
+							placeholder="<?php esc_attr_e( 'Enter a search term...', 'nabu' ); ?>"
 							name="s"
 							value="<?php echo esc_attr( get_search_query() ); ?>">
 						<span class="input-group-btn">
 							<button class="btn btn-primary" type="submit">
-								<?php esc_html_e( 'Suchen', 'nabu' ); ?>
+								<?php esc_html_e( 'Search', 'nabu' ); ?>
 							</button>
 						</span>
 					</div>

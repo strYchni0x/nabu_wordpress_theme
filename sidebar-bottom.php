@@ -7,7 +7,7 @@
 
 	<!-- Sidebar-Navigation unten (Pills) -->
 	<?php if ( has_nav_menu( 'sidebar-nav-bottom' ) ) : ?>
-	<nav class="nav-main-right hidden-sm-down" aria-label="<?php esc_attr_e( 'Sidebar-Navigation unten', 'nabu' ); ?>">
+	<nav class="nav-main-right hidden-sm-down" aria-label="<?php esc_attr_e( 'Sidebar navigation bottom', 'nabu' ); ?>">
 		<?php nabu_sidebar_bottom_nav(); ?>
 	</nav>
 	<?php endif; ?>
