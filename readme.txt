@@ -2,7 +2,7 @@
 
 Theme Name: NABU
 Theme URI: https://github.com/strYchni0x/nabu_wordpress_theme
-Version: 1.2.8
+Version: 1.2.9
 Author: Florian Willnat
 Author Email: florian@nabu-diepholz.de
 Requires at least: WordPress 5.8
@@ -124,6 +124,31 @@ Der Bildslider auf der Startseite zeigt automatisch die letzten Beiträge MIT Be
 Empfohlene Bildgröße: 940 × 300 Pixel.
 
 Anzahl der Slider-Bilder: Design > Customizer > Startseite – Bildslider
+
+=== Automatisches Weiterschalten und Barrierefreiheit ===
+
+Der Slider schaltet standardmäßig NICHT automatisch weiter. Besucher blättern
+selbst über die Pfeile oder die Punkte darunter.
+
+Das ist eine bewusste Entscheidung: WCAG 2.2, Erfolgskriterium 2.2.2 („Pause,
+Stop, Hide", Konformitätsstufe A) verlangt, dass sich automatisch bewegte
+Inhalte anhalten lassen. Automatische Bewegung erschwert außerdem das Lesen für
+Menschen mit Aufmerksamkeits- oder Leseeinschränkungen, und wer langsamer liest,
+verpasst Inhalte.
+
+Wer das automatische Weiterschalten dennoch möchte:
+Design > Customizer > Startseite – Bildslider > „Bildslider automatisch
+weiterschalten"
+
+Ist die Option aktiv, sorgt das Theme selbst für die Barrierefreiheit:
+- Unten rechts im Slider erscheint eine Pause-Taste. Ein Klick hält den Slider
+  dauerhaft an; er startet auch dann nicht von allein wieder, wenn die Maus den
+  Bereich verlässt.
+- Besucher, die in ihrem Betriebssystem „Bewegung reduzieren" eingestellt haben
+  (prefers-reduced-motion), bekommen gar keine automatische Bewegung. Die Taste
+  bleibt sichtbar, damit sie die Wiedergabe bei Bedarf selbst starten können.
+- Der Slider pausiert außerdem, solange er mit der Maus überfahren wird oder den
+  Tastaturfokus hat.
 
 === Logo einrichten ===
 
@@ -336,6 +361,24 @@ Web: https://www.nabu-diepholz.de
 
 
 == Changelog ==
+
+= 1.2.9 =
+* Barrierefreiheit: Der Bildslider schaltet nicht mehr automatisch weiter. Bisher
+  lief er fest alle 5 Sekunden, ohne Möglichkeit zum Anhalten – ein Verstoß gegen
+  WCAG 2.2 Erfolgskriterium 2.2.2 („Pause, Stop, Hide", Stufe A). Das Pausieren
+  bei Mausberührung genügt dafür nicht, da es Touch-Nutzern nicht hilft.
+* Neue Customizer-Option „Bildslider automatisch weiterschalten" (standardmäßig
+  aus) unter Startseite – Bildslider
+* Ist sie aktiv, zeigt der Slider eine Pause-Taste. Diese hält ihn dauerhaft an:
+  Bootstrap ruft bei mouseleave von sich aus cycle() auf, deshalb wird zusätzlich
+  das Intervall in der Instanzkonfiguration auf false gesetzt – sonst liefe der
+  Slider gegen den ausdrücklichen Nutzerwunsch wieder los.
+* prefers-reduced-motion wird respektiert: Wer im Betriebssystem weniger Bewegung
+  eingestellt hat, bekommt keine automatische Bewegung, kann sie über die Taste
+  aber selbst starten
+* Hinweis für bestehende Installationen: Sliders, die bisher automatisch liefen,
+  stehen nach dem Update still. Das automatische Weiterschalten lässt sich im
+  Customizer wieder einschalten.
 
 = 1.2.8 =
 * Bugfix: Die Menüposition "Haupt-Navigation (blaue Leiste)" war zwar registriert und

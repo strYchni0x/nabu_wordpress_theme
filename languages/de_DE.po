@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the NABU theme.
 msgid ""
 msgstr ""
-"Project-Id-Version: NABU 1.2.8\n"
+"Project-Id-Version: NABU 1.2.9\n"
 "Report-Msgid-Bugs-To: https://github.com/strYchni0x/nabu_wordpress_theme/issues\n"
-"POT-Creation-Date: 2026-07-20 19:38+0000\n"
-"PO-Revision-Date: 2026-07-20 19:38+0000\n"
+"POT-Creation-Date: 2026-07-21 11:03+0000\n"
+"PO-Revision-Date: 2026-07-21 11:03+0000\n"
 "Last-Translator: Florian Willnat <florian@nabu-diepholz.de>\n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
@@ -39,7 +39,7 @@ msgid "Accent colour (\"Get involved\" button)"
 msgstr "Akzentfarbe (\"Mitmachen\"-Button)"
 
 #: footer.php:87
-#: inc/customizer.php:252
+#: inc/customizer.php:263
 msgid "Account holder"
 msgstr "Kontoinhaber"
 
@@ -47,7 +47,7 @@ msgstr "Kontoinhaber"
 msgid "Additional links in the meta navigation at the top right. Alternatively configure the \"Meta navigation\" menu under Appearance > Menus."
 msgstr "Zusätzliche Links in der Meta-Navigation oben rechts. Alternativ: Menü \"Meta-Navigation\" unter Design > Menüs konfigurieren."
 
-#: inc/customizer.php:256
+#: inc/customizer.php:267
 msgid "Additional note"
 msgstr "Zusätzlicher Hinweis"
 
@@ -55,11 +55,15 @@ msgstr "Zusätzlicher Hinweis"
 msgid "Address & contact"
 msgstr "Adresse & Kontakt"
 
+#: inc/customizer.php:166
+msgid "Advance the slider automatically"
+msgstr "Bildslider automatisch weiterschalten"
+
 #: inc/template-tags.php:99
 msgid "Author: %s"
 msgstr "Autor: %s"
 
-#: inc/customizer.php:255
+#: inc/customizer.php:266
 msgid "BIC"
 msgstr "BIC"
 
@@ -68,7 +72,7 @@ msgid "Background beige"
 msgstr "Hintergrund Beige"
 
 #: footer.php:90
-#: inc/customizer.php:253
+#: inc/customizer.php:264
 msgid "Bank"
 msgstr "Bank"
 
@@ -76,7 +80,7 @@ msgstr "Bank"
 msgid "Box title:"
 msgstr "Titel des Kastens:"
 
-#: inc/customizer.php:166
+#: inc/customizer.php:177
 msgid "Button text in the slider"
 msgstr "Button-Text im Slider"
 
@@ -112,7 +116,7 @@ msgstr "Seite bearbeiten <span class=\"screen-reader-text\">\"%s\"</span>"
 msgid "Edit post <span class=\"screen-reader-text\">\"%s\"</span>"
 msgstr "Beitrag bearbeiten <span class=\"screen-reader-text\">\"%s\"</span>"
 
-#: inc/customizer.php:226
+#: inc/customizer.php:237
 msgid "Email address"
 msgstr "E-Mail-Adresse"
 
@@ -132,11 +136,11 @@ msgstr "Suchbegriff eingeben..."
 msgid "Footer navigation"
 msgstr "Footer-Navigation"
 
-#: inc/customizer.php:216
+#: inc/customizer.php:227
 msgid "Footer – address & contact"
 msgstr "Footer – Adresse & Kontakt"
 
-#: inc/customizer.php:246
+#: inc/customizer.php:257
 msgid "Footer – donation account"
 msgstr "Footer – Spendenkonto"
 
@@ -160,19 +164,19 @@ msgstr "Footer: Spendenkonto"
 msgid "Front page – image slider"
 msgstr "Startseite – Bildslider"
 
-#: inc/customizer.php:175
+#: inc/customizer.php:186
 msgid "Front page – news"
 msgstr "Startseite – Neuigkeiten"
 
-#: functions.php:372
+#: functions.php:376
 msgid "Get involved (orange)"
 msgstr "Mitmachen (Orange)"
 
-#: inc/customizer.php:254
+#: inc/customizer.php:265
 msgid "IBAN"
 msgstr "IBAN"
 
-#: header.php:74
+#: header.php:76
 msgid "Image slider"
 msgstr "Bildslider"
 
@@ -189,7 +193,7 @@ msgstr "Mehr erfahren"
 msgid "Leave a comment <span class=\"screen-reader-text\">on %s</span>"
 msgstr "Kommentieren <span class=\"screen-reader-text\">für %s</span>"
 
-#: inc/customizer.php:198
+#: inc/customizer.php:209
 msgid "Leave empty to use the automatic blog page URL."
 msgstr "Leer lassen für automatische Blog-Seiten-URL."
 
@@ -250,7 +254,7 @@ msgid "NABU RSS feed"
 msgstr "NABU RSS-Feed"
 
 #: functions.php:50
-#: functions.php:382
+#: functions.php:386
 msgid "NABU blue"
 msgstr "NABU Blau"
 
@@ -266,7 +270,7 @@ msgstr "NABU Dunkelblau"
 msgid "NABU green"
 msgstr "NABU Grün"
 
-#: functions.php:377
+#: functions.php:381
 msgid "NABU highlight"
 msgstr "NABU Hervorhebung"
 
@@ -274,11 +278,11 @@ msgstr "NABU Hervorhebung"
 msgid "NABU orange"
 msgstr "NABU Orange"
 
-#: functions.php:387
+#: functions.php:391
 msgid "NABU teaser"
 msgstr "NABU Teaser"
 
-#: inc/customizer.php:222
+#: inc/customizer.php:233
 msgid "Name of the group / organisation"
 msgstr "Name der Gruppe / Organisation"
 
@@ -300,7 +304,7 @@ msgid "News"
 msgstr "Aktuelles"
 
 #: front-page.php:112
-#: header.php:111
+#: header.php:113
 msgid "Next"
 msgstr "Weiter"
 
@@ -324,13 +328,17 @@ msgstr "Nichts gefunden"
 msgid "Number of entries (1–5):"
 msgstr "Anzahl Einträge (1–5):"
 
-#: inc/customizer.php:184
+#: inc/customizer.php:195
 msgid "Number of news items in the slider"
 msgstr "Anzahl Neuigkeiten im Slider"
 
 #: inc/customizer.php:155
 msgid "Number of slider images"
 msgstr "Anzahl Slider-Bilder"
+
+#: inc/customizer.php:169
+msgid "Off by default for accessibility reasons: automatically moving content is hard to follow for some visitors. When switched on, the slider shows a pause button, and visitors who have asked their system for reduced motion never get the automatic movement."
+msgstr "Aus Gründen der Barrierefreiheit standardmäßig aus: Automatisch bewegte Inhalte sind für manche Besucher schwer zu erfassen. Ist die Option aktiv, zeigt der Slider eine Pause-Taste; Besucher, die in ihrem Betriebssystem weniger Bewegung eingestellt haben, bekommen die automatische Bewegung gar nicht erst."
 
 #: archive.php:53
 #: index.php:57
@@ -365,13 +373,22 @@ msgstr "Seite nicht gefunden"
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: inc/customizer.php:225
+#: functions.php:235
+#: header.php:119
+msgid "Pause slideshow"
+msgstr "Bildslider anhalten"
+
+#: inc/customizer.php:236
 msgid "Phone"
 msgstr "Telefon"
 
 #: footer.php:29
 msgid "Phone:"
 msgstr "Tel.:"
+
+#: functions.php:236
+msgid "Play slideshow"
+msgstr "Bildslider abspielen"
 
 #: comments.php:76
 msgid "Post comment"
@@ -381,16 +398,16 @@ msgstr "Kommentar absenden"
 msgid "Post navigation"
 msgstr "Beitragsnavigation"
 
-#: inc/customizer.php:224
+#: inc/customizer.php:235
 msgid "Postcode and city"
 msgstr "PLZ und Ort"
 
-#: inc/customizer.php:206
+#: inc/customizer.php:217
 msgid "Posts per page (front page)"
 msgstr "Beiträge pro Seite (Hauptseite)"
 
 #: front-page.php:109
-#: header.php:107
+#: header.php:109
 msgid "Previous"
 msgstr "Zurück"
 
@@ -442,11 +459,11 @@ msgstr "Suche: \"%s\""
 msgid "Show date"
 msgstr "Datum anzeigen"
 
-#: inc/customizer.php:218
+#: inc/customizer.php:229
 msgid "Shown in footer column 1 unless a widget is assigned."
 msgstr "Wird in Footer-Spalte 1 angezeigt, sofern kein Widget zugewiesen ist."
 
-#: inc/customizer.php:248
+#: inc/customizer.php:259
 msgid "Shown in footer column 4 unless a widget is assigned."
 msgstr "Wird in Footer-Spalte 4 angezeigt, sofern kein Widget zugewiesen ist."
 
@@ -490,7 +507,7 @@ msgstr "Slider Navigation"
 msgid "Social media"
 msgstr "Soziale Medien"
 
-#: inc/customizer.php:223
+#: inc/customizer.php:234
 msgid "Street and house number"
 msgstr "Straße und Hausnummer"
 
@@ -522,7 +539,7 @@ msgstr "Der Slider auf der Startseite zeigt automatisch die letzten Beiträge mi
 msgid "To the home page"
 msgstr "Zur Startseite"
 
-#: inc/customizer.php:195
+#: inc/customizer.php:206
 msgid "URL for the \"More news\" button"
 msgstr "URL \"Weitere Meldungen\" Button"
 
@@ -530,7 +547,7 @@ msgstr "URL \"Weitere Meldungen\" Button"
 msgid "Unfortunately no results were found. Please try a different search term."
 msgstr "Leider wurden keine Ergebnisse gefunden. Bitte versuchen Sie einen anderen Suchbegriff."
 
-#: inc/customizer.php:227
+#: inc/customizer.php:238
 msgid "Website URL"
 msgstr "Website-URL"
 
@@ -559,7 +576,7 @@ msgctxt "list item separator"
 msgid ", "
 msgstr ", "
 
-#: functions.php:406
+#: functions.php:410
 msgid "more"
 msgstr "mehr"
 

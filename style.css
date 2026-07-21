@@ -4,7 +4,7 @@ Theme URI: https://github.com/strYchni0x/nabu_wordpress_theme
 Author: Florian Willnat
 Author URI: https://www.nabu-diepholz.de
 Description: WordPress theme for local NABU groups (German nature conservation association). Based on the NABU HTML design template with Bootstrap 4, Source Sans Pro and the NABU colour scheme (blue #0068B4, green, orange). Two-column layout with right sidebar, image slider, four-column footer and full block editor support. German documentation is included in readme.txt.
-Version: 1.2.8
+Version: 1.2.9
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.4
@@ -498,4 +498,33 @@ Block Styles – Benutzerdefinierte Stilvarianten
     padding: 0.4em 0.6em;
     color: #333;
     font-size: 0.875em;
+}
+
+/*--------------------------------------------------------------
+Bildslider: Pause-/Play-Schaltfläche (WCAG 2.2.2)
+--------------------------------------------------------------*/
+.nabu-carousel-toggle {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    z-index: 20;
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0;
+    line-height: 1;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nabu-carousel-toggle:hover,
+.nabu-carousel-toggle:focus {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.nabu-carousel-toggle:focus {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
 }

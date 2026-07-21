@@ -158,6 +158,17 @@ function nabu_customize_register( $wp_customize ) {
 		'input_attrs' => array( 'min' => 1, 'max' => 10 ),
 	) );
 
+	$wp_customize->add_setting( 'nabu_carousel_autoplay', array(
+		'default'           => false,
+		'sanitize_callback' => 'nabu_sanitize_checkbox',
+	) );
+	$wp_customize->add_control( 'nabu_carousel_autoplay', array(
+		'label'       => esc_html__( 'Advance the slider automatically', 'nabu' ),
+		'section'     => 'nabu_carousel',
+		'type'        => 'checkbox',
+		'description' => esc_html__( 'Off by default for accessibility reasons: automatically moving content is hard to follow for some visitors. When switched on, the slider shows a pause button, and visitors who have asked their system for reduced motion never get the automatic movement.', 'nabu' ),
+	) );
+
 	$wp_customize->add_setting( 'nabu_carousel_cta', array(
 		'default'           => 'Learn more',
 		'sanitize_callback' => 'sanitize_text_field',
@@ -283,3 +294,10 @@ function nabu_customize_preview_js() {
 	);
 }
 add_action( 'customize_preview_init', 'nabu_customize_preview_js' );
+
+/**
+ * Sanitize-Callback für Checkbox-Einstellungen
+ */
+function nabu_sanitize_checkbox( $checked ) {
+	return ( isset( $checked ) && true === (bool) $checked );
+}

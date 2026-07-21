@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme-Konstanten
-define( 'NABU_VERSION', '1.2.8' );
+define( 'NABU_VERSION', '1.2.9' );
 define( 'NABU_DIR', get_template_directory() );
 define( 'NABU_URI', get_template_directory_uri() );
 
@@ -230,6 +230,10 @@ function nabu_scripts() {
 		'homeUrl'           => esc_url( home_url( '/' ) ),
 		'searchLabel'       => esc_html__( 'Search', 'nabu' ),
 		'moreLabel'         => esc_html__( 'more →', 'nabu' ),
+		'carouselAutoplay'  => (bool) get_theme_mod( 'nabu_carousel_autoplay', false ),
+		'carouselInterval'  => 5000,
+		'pauseLabel'        => esc_html__( 'Pause slideshow', 'nabu' ),
+		'playLabel'         => esc_html__( 'Play slideshow', 'nabu' ),
 	) );
 
 	// Kommentar-Script wenn nötig

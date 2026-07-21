@@ -69,9 +69,11 @@
 				'meta_compare'   => 'EXISTS',
 			);
 			$carousel_query = new WP_Query( $carousel_args );
+			// Automatisches Weiterschalten ist bewusst standardmaessig aus (WCAG 2.2.2)
+			$carousel_autoplay = (bool) get_theme_mod( 'nabu_carousel_autoplay', false );
 			if ( $carousel_query->have_posts() ) :
 			?>
-			<div id="nabu-carousel" class="carousel slide" data-ride="carousel" aria-label="<?php esc_attr_e( 'Image slider', 'nabu' ); ?>">
+			<div id="nabu-carousel" class="carousel slide"<?php echo $carousel_autoplay ? ' data-ride="carousel"' : ''; ?> aria-label="<?php esc_attr_e( 'Image slider', 'nabu' ); ?>">
 				<ol class="carousel-indicators">
 					<?php $ci = 0; while ( $carousel_query->have_posts() ) : $carousel_query->the_post(); ?>
 					<li data-target="#nabu-carousel"
@@ -110,6 +112,14 @@
 					<span class="icon-next" aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
 					<span class="sr-only"><?php esc_html_e( 'Next', 'nabu' ); ?></span>
 				</a>
+
+				<?php if ( $carousel_autoplay ) : ?>
+					<?php /* WCAG 2.2.2: bewegter Inhalt braucht eine Moeglichkeit zum Anhalten */ ?>
+					<button type="button" class="nabu-carousel-toggle" data-state="playing"
+						aria-label="<?php esc_attr_e( 'Pause slideshow', 'nabu' ); ?>">
+						<i class="fa fa-pause" aria-hidden="true"></i>
+					</button>
+				<?php endif; ?>
 			</div><!-- #nabu-carousel -->
 			<?php endif; // carousel_query->have_posts() ?>
 
