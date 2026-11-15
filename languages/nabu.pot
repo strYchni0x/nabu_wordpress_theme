@@ -599,3 +599,8 @@ msgstr ""
 #: functions.php
 msgid "NABU coral red"
 msgstr ""
+
+#. translators: %s: title of the parent menu item
+#: functions.php
+msgid "Submenu of %s"
+msgstr ""

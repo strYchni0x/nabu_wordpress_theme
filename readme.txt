@@ -2,7 +2,7 @@
 
 Theme Name: NABU
 Theme URI: https://github.com/strYchni0x/nabu_wordpress_theme
-Version: 1.3.1
+Version: 1.3.2
 Author: Florian Willnat
 Author Email: florian@nabu-diepholz.de
 Requires at least: WordPress 5.8
@@ -361,6 +361,15 @@ Web: https://www.nabu-diepholz.de
 
 
 == Changelog ==
+
+= 1.3.2 =
+* Sidebar-Navigation: Untermenüs sind jetzt eingeklappt und lassen sich über
+  einen kleinen Pfeil neben dem übergeordneten Menüpunkt auf- und zuklappen.
+* Der Menüpunkt selbst bleibt ein normaler Link. Befindet man sich auf der
+  zugehörigen Seite oder einer ihrer Unterseiten, ist das Untermenü von
+  vornherein geöffnet.
+* Gilt für beide Sidebar-Menüs und für das mobile Seitenmenü. Der Pfeil ist per
+  Tastatur bedienbar und meldet seinen Zustand über aria-expanded.
 
 = 1.3.1 =
 * Footer: Bereiche ohne Inhalt werden nicht mehr angezeigt. Bisher erschien z. B.

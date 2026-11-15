@@ -601,3 +601,8 @@ msgstr "NABU Gelb"
 #: functions.php
 msgid "NABU coral red"
 msgstr "NABU Korallrot"
+
+#. translators: %s: title of the parent menu item
+#: functions.php
+msgid "Submenu of %s"
+msgstr "Untermenü von %s"

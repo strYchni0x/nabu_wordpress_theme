@@ -61,6 +61,19 @@ jQuery(document).ready(function ($) {
     }
 
     /////////////////////////////////////////////////////////////////////
+    // Sidebar-Navigation: Untermenues per Pfeil auf- und zuklappen
+    // Delegiert, weil das mobile Menue eine Kopie der Sidebar-Nav ist.
+    /////////////////////////////////////////////////////////////////////
+    $(document).on('click', '.nabu-submenu-toggle', function (e) {
+        e.preventDefault();
+        var $item = $(this).closest('.menu-item-has-children');
+        var offen = !$item.hasClass('nabu-submenu-open');
+
+        $item.toggleClass('nabu-submenu-open', offen);
+        $(this).attr('aria-expanded', offen ? 'true' : 'false');
+    });
+
+    /////////////////////////////////////////////////////////////////////
     // Slick-Slider für Neuigkeiten auf der Startseite
     /////////////////////////////////////////////////////////////////////
     var $slider = $('.slick');

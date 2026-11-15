@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme-Konstanten
-define( 'NABU_VERSION', '1.3.1' );
+define( 'NABU_VERSION', '1.3.2' );
 define( 'NABU_DIR', get_template_directory() );
 define( 'NABU_URI', get_template_directory_uri() );
 
@@ -336,7 +336,12 @@ class Nabu_Walker_Sidebar_Nav extends Walker_Nav_Menu {
 		$class_names = implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
-		$output .= '<li' . $class_names . '>';
+		// Untermenues sind eingeklappt. Offen ist nur der Zweig, in dem man
+		// sich gerade befindet; alle anderen oeffnet die Pfeil-Schaltflaeche.
+		$has_children = in_array( 'menu-item-has-children', $classes, true );
+		$is_open      = $has_children && array_intersect( array( 'current-menu-item', 'current-menu-parent', 'current-menu-ancestor' ), $classes );
+
+		$output .= '<li' . ( $is_open ? str_replace( 'class="', 'class="nabu-submenu-open ', $class_names ) : $class_names ) . '>';
 
 		$link_class = 'nav-link';
 		if ( in_array( 'current-menu-item', (array) $item->classes ) || in_array( 'current-menu-ancestor', (array) $item->classes ) ) {
@@ -363,6 +368,15 @@ class Nabu_Walker_Sidebar_Nav extends Walker_Nav_Menu {
 		$item_output  = '<a' . $attributes . '>';
 		$item_output .= apply_filters( 'the_title', $item->title, $item->ID );
 		$item_output .= '</a>';
+
+		if ( $has_children ) {
+			$item_output .= sprintf(
+				'<button type="button" class="nabu-submenu-toggle" aria-expanded="%1$s" aria-label="%2$s"><span class="nabu-submenu-arrow" aria-hidden="true"></span></button>',
+				$is_open ? 'true' : 'false',
+				/* translators: %s: title of the parent menu item */
+				esc_attr( sprintf( __( 'Submenu of %s', 'nabu' ), wp_strip_all_tags( $item->title ) ) )
+			);
+		}
 
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
