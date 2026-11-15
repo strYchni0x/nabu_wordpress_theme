@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme-Konstanten
-define( 'NABU_VERSION', '1.3.0' );
+define( 'NABU_VERSION', '1.3.1' );
 define( 'NABU_DIR', get_template_directory() );
 define( 'NABU_URI', get_template_directory_uri() );
 

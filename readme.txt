@@ -2,7 +2,7 @@
 
 Theme Name: NABU
 Theme URI: https://github.com/strYchni0x/nabu_wordpress_theme
-Version: 1.3.0
+Version: 1.3.1
 Author: Florian Willnat
 Author Email: florian@nabu-diepholz.de
 Requires at least: WordPress 5.8
@@ -361,6 +361,14 @@ Web: https://www.nabu-diepholz.de
 
 
 == Changelog ==
+
+= 1.3.1 =
+* Footer: Bereiche ohne Inhalt werden nicht mehr angezeigt. Bisher erschien z. B.
+  die Überschrift „Navigation" auch dann, wenn kein Footer-Menü zugewiesen war.
+* Die verbleibenden Bereiche teilen sich die Breite gleichmäßig
+  (4 Bereiche je 25 %, 3 Bereiche je 33 %, 2 Bereiche je 50 %).
+* Betrifft „Navigation" (ohne Widget und ohne Menü bzw. mit leerem Menü) und
+  „Spendenkonto" (ohne Widget und ohne Angaben im Customizer).
 
 = 1.3.0 =
 * Farben an die neu gestaltete Website nabu.de angeglichen (Stand November 2026).
