@@ -2,7 +2,7 @@
 
 Theme Name: NABU
 Theme URI: https://github.com/strYchni0x/nabu_wordpress_theme
-Version: 1.2.9
+Version: 1.3.0
 Author: Florian Willnat
 Author Email: florian@nabu-diepholz.de
 Requires at least: WordPress 5.8
@@ -361,6 +361,24 @@ Web: https://www.nabu-diepholz.de
 
 
 == Changelog ==
+
+= 1.3.0 =
+* Farben an die neu gestaltete Website nabu.de angeglichen (Stand November 2026).
+  NABU Blau (#0068B4) und Gelb (#ffcc00) bleiben unverändert.
+* Orange: #ef7c00 wird #e47600 (Hover #bf6200) – betrifft Mitmachen-Knopf,
+  Blockstil „Mitmachen" und die Akzentfarbe im Customizer. Ein gespeicherter
+  alter Standardwert #ef7c00 wird wie der neue Standard behandelt.
+* Dunkelblau: #003c68 wird #003560
+* Hintergrundflächen: Beige #e3e2d4 wird das hellere #f7f6f2; Trennlinien und
+  Tabellenrahmen nutzen stattdessen das neutrale Grau #e2e2e2
+* Text: Schwarz #000000 statt Dunkelgrau; grauer Nebentext #595858 statt #86846b
+* Block-Editor-Palette: „NABU Grün" ist jetzt das Dunkelgrün #008143,
+  „Hintergrund Beige" heißt „Hintergrund Hell"; neu sind NABU Hellblau (#bbcdeb),
+  NABU Gelb (#ffcc00) und NABU Korallrot (#a90b20). Die Slugs bleiben gleich,
+  bestehende Inhalte übernehmen die neuen Farbwerte automatisch.
+* Unverändert: das Hellgrün #76b828 für Erfolgsmeldungen (auf nabu.de weiterhin
+  Systemfarbe) und das Mittelblau #6f9ed4 der Info-Elemente, weil diese weiße
+  Schrift tragen und mit dem neuen Hellblau nicht mehr lesbar wären.
 
 = 1.2.9 =
 * Barrierefreiheit: Der Bildslider schaltet nicht mehr automatisch weiter. Bisher

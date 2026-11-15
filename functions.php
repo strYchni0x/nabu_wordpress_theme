@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme-Konstanten
-define( 'NABU_VERSION', '1.2.9' );
+define( 'NABU_VERSION', '1.3.0' );
 define( 'NABU_DIR', get_template_directory() );
 define( 'NABU_URI', get_template_directory_uri() );
 
@@ -54,22 +54,37 @@ function nabu_setup() {
 		array(
 			'name'  => esc_html__( 'NABU dark blue', 'nabu' ),
 			'slug'  => 'nabu-dunkelblau',
-			'color' => '#003c68',
+			'color' => '#003560',
 		),
 		array(
 			'name'  => esc_html__( 'NABU green', 'nabu' ),
 			'slug'  => 'nabu-gruen',
-			'color' => '#76b828',
+			'color' => '#008143',
 		),
 		array(
 			'name'  => esc_html__( 'NABU orange', 'nabu' ),
 			'slug'  => 'nabu-orange',
-			'color' => '#ef7c00',
+			'color' => '#e47600',
 		),
 		array(
-			'name'  => esc_html__( 'Background beige', 'nabu' ),
+			'name'  => esc_html__( 'Background light', 'nabu' ),
 			'slug'  => 'nabu-hintergrund',
-			'color' => '#e3e2d4',
+			'color' => '#f7f6f2',
+		),
+		array(
+			'name'  => esc_html__( 'NABU light blue', 'nabu' ),
+			'slug'  => 'nabu-hellblau',
+			'color' => '#bbcdeb',
+		),
+		array(
+			'name'  => esc_html__( 'NABU yellow', 'nabu' ),
+			'slug'  => 'nabu-gelb',
+			'color' => '#ffcc00',
+		),
+		array(
+			'name'  => esc_html__( 'NABU coral red', 'nabu' ),
+			'slug'  => 'nabu-korallrot',
+			'color' => '#a90b20',
 		),
 		array(
 			'name'  => esc_html__( 'White', 'nabu' ),
@@ -79,7 +94,7 @@ function nabu_setup() {
 		array(
 			'name'  => esc_html__( 'Text dark', 'nabu' ),
 			'slug'  => 'nabu-text',
-			'color' => '#333333',
+			'color' => '#000000',
 		),
 	) );
 
@@ -424,10 +439,15 @@ add_filter( 'excerpt_length', 'nabu_excerpt_length', 999 );
  */
 function nabu_customizer_css() {
 	$primary_color = get_theme_mod( 'nabu_primary_color', '#0068B4' );
-	$accent_color  = get_theme_mod( 'nabu_accent_color', '#ef7c00' );
+	$accent_color  = get_theme_mod( 'nabu_accent_color', '#e47600' );
+
+	// Bis 1.2.9 war #ef7c00 der Standard-Akzent; ein gespeicherter Altwert gilt weiter als Standard.
+	if ( '#ef7c00' === strtolower( $accent_color ) ) {
+		$accent_color = '#e47600';
+	}
 
 	// Nur ausgeben wenn von Standard abweichend
-	if ( '#0068B4' === $primary_color && '#ef7c00' === $accent_color ) {
+	if ( '#0068B4' === $primary_color && '#e47600' === $accent_color ) {
 		return;
 	}
 
@@ -444,7 +464,7 @@ function nabu_customizer_css() {
 		';
 	}
 
-	if ( '#ef7c00' !== $accent_color ) {
+	if ( '#e47600' !== $accent_color ) {
 		$css .= '
 		.nav-link-mitmachen { background: ' . esc_attr( $accent_color ) . ' !important; }
 		.btn-danger { background-color: ' . esc_attr( $accent_color ) . ' !important; border-color: ' . esc_attr( $accent_color ) . ' !important; }

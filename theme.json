@@ -10,12 +10,15 @@
             "defaultPalette": false,
             "palette": [
                 { "name": "NABU Blau",        "slug": "nabu-blau",        "color": "#0068B4" },
-                { "name": "NABU Dunkelblau",   "slug": "nabu-dunkelblau",  "color": "#003c68" },
-                { "name": "NABU Grün",         "slug": "nabu-gruen",       "color": "#76b828" },
-                { "name": "NABU Orange",       "slug": "nabu-orange",      "color": "#ef7c00" },
-                { "name": "Hintergrund Beige", "slug": "nabu-hintergrund", "color": "#e3e2d4" },
+                { "name": "NABU Dunkelblau",   "slug": "nabu-dunkelblau",  "color": "#003560" },
+                { "name": "NABU Grün",         "slug": "nabu-gruen",       "color": "#008143" },
+                { "name": "NABU Orange",       "slug": "nabu-orange",      "color": "#e47600" },
+                { "name": "Hintergrund Hell",  "slug": "nabu-hintergrund", "color": "#f7f6f2" },
+                { "name": "NABU Hellblau",     "slug": "nabu-hellblau",    "color": "#bbcdeb" },
+                { "name": "NABU Gelb",         "slug": "nabu-gelb",        "color": "#ffcc00" },
+                { "name": "NABU Korallrot",    "slug": "nabu-korallrot",   "color": "#a90b20" },
                 { "name": "Weiß",              "slug": "nabu-weiss",       "color": "#ffffff" },
-                { "name": "Text Dunkel",       "slug": "nabu-text",        "color": "#333333" }
+                { "name": "Text Dunkel",       "slug": "nabu-text",        "color": "#000000" }
             ]
         },
         "typography": {
@@ -50,7 +53,7 @@
     "styles": {
         "color": {
             "background": "#ffffff",
-            "text": "#333333"
+            "text": "#000000"
         },
         "typography": {
             "fontFamily": "var(--wp--preset--font-family--source-sans-pro)",

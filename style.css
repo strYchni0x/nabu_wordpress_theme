@@ -4,7 +4,7 @@ Theme URI: https://github.com/strYchni0x/nabu_wordpress_theme
 Author: Florian Willnat
 Author URI: https://www.nabu-diepholz.de
 Description: WordPress theme for local NABU groups (German nature conservation association). Based on the NABU HTML design template with Bootstrap 4, Source Sans Pro and the NABU colour scheme (blue #0068B4, green, orange). Two-column layout with right sidebar, image slider, four-column footer and full block editor support. German documentation is included in readme.txt.
-Version: 1.2.9
+Version: 1.3.0
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.4
@@ -57,7 +57,7 @@ WordPress Alignment Classes
 
 .wp-caption-text {
     font-size: 0.875em;
-    color: #86846b;
+    color: #595858;
     margin-top: 0.25em;
 }
 
@@ -82,12 +82,12 @@ WordPress Comments
 
 .comment-meta {
     font-size: 0.875em;
-    color: #86846b;
+    color: #595858;
     margin-bottom: 0.5em;
 }
 
 .comment-body {
-    border-bottom: 1px solid #e3e2d4;
+    border-bottom: 1px solid #e2e2e2;
     margin-bottom: 1.5em;
     padding-bottom: 1.5em;
 }
@@ -226,7 +226,7 @@ Entry Footer (Kategorien, Schlagwörter, Kommentarlink)
     margin-top: 0.4em;
     font-size: 0.8em;
     line-height: 1.3;
-    color: #86846b;
+    color: #595858;
 }
 
 .entry-footer a {
@@ -291,7 +291,7 @@ RSS-Feed Widget (Sidebar)
 
 .nabu-rss-item {
     padding: 0.5em 0.75em;
-    border-bottom: 1px solid #e3e2d4;
+    border-bottom: 1px solid #e2e2e2;
     font-size: 0.88em;
     line-height: 1.4;
 }
@@ -307,14 +307,14 @@ RSS-Feed Widget (Sidebar)
 }
 
 .nabu-rss-item a:hover {
-    color: #003c68;
+    color: #003560;
     text-decoration: underline;
 }
 
 .nabu-rss-date {
     display: block;
     font-size: 0.8em;
-    color: #86846b;
+    color: #595858;
     margin-top: 0.2em;
 }
 
@@ -377,23 +377,32 @@ Block Editor – NABU Farbpalette (Frontend-Klassen)
 .has-nabu-blau-color            { color: #0068B4 !important; }
 .has-nabu-blau-background-color { background-color: #0068B4 !important; color: #fff; }
 
-.has-nabu-dunkelblau-color            { color: #003c68 !important; }
-.has-nabu-dunkelblau-background-color { background-color: #003c68 !important; color: #fff; }
+.has-nabu-dunkelblau-color            { color: #003560 !important; }
+.has-nabu-dunkelblau-background-color { background-color: #003560 !important; color: #fff; }
 
-.has-nabu-gruen-color            { color: #76b828 !important; }
-.has-nabu-gruen-background-color { background-color: #76b828 !important; color: #fff; }
+.has-nabu-gruen-color            { color: #008143 !important; }
+.has-nabu-gruen-background-color { background-color: #008143 !important; color: #fff; }
 
-.has-nabu-orange-color            { color: #ef7c00 !important; }
-.has-nabu-orange-background-color { background-color: #ef7c00 !important; color: #fff; }
+.has-nabu-orange-color            { color: #e47600 !important; }
+.has-nabu-orange-background-color { background-color: #e47600 !important; color: #fff; }
 
-.has-nabu-hintergrund-color            { color: #e3e2d4 !important; }
-.has-nabu-hintergrund-background-color { background-color: #e3e2d4 !important; }
+.has-nabu-hintergrund-color            { color: #f7f6f2 !important; }
+.has-nabu-hintergrund-background-color { background-color: #f7f6f2 !important; }
+
+.has-nabu-hellblau-color            { color: #bbcdeb !important; }
+.has-nabu-hellblau-background-color { background-color: #bbcdeb !important; color: #003560; }
+
+.has-nabu-gelb-color            { color: #ffcc00 !important; }
+.has-nabu-gelb-background-color { background-color: #ffcc00 !important; color: #000; }
+
+.has-nabu-korallrot-color            { color: #a90b20 !important; }
+.has-nabu-korallrot-background-color { background-color: #a90b20 !important; color: #fff; }
 
 .has-nabu-weiss-color            { color: #ffffff !important; }
 .has-nabu-weiss-background-color { background-color: #ffffff !important; }
 
-.has-nabu-text-color            { color: #333333 !important; }
-.has-nabu-text-background-color { background-color: #333333 !important; color: #fff; }
+.has-nabu-text-color            { color: #000000 !important; }
+.has-nabu-text-background-color { background-color: #000000 !important; color: #fff; }
 
 /*--------------------------------------------------------------
 Block Editor – Button Block
@@ -408,8 +417,8 @@ Block Editor – Button Block
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
-    background-color: #003c68;
-    border-color: #003c68;
+    background-color: #003560;
+    border-color: #003560;
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link {
@@ -434,7 +443,7 @@ Block Editor – Quote / Pullquote
 Block Editor – Tabelle
 --------------------------------------------------------------*/
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
-    background-color: #e3e2d4;
+    background-color: #f7f6f2;
 }
 
 /*--------------------------------------------------------------
@@ -442,7 +451,7 @@ Block Editor – Bild-Unterschrift
 --------------------------------------------------------------*/
 .wp-block-image figcaption,
 .wp-block-gallery figcaption {
-    color: #86846b;
+    color: #595858;
     font-size: 0.875em;
 }
 
@@ -452,32 +461,32 @@ Block Styles – Benutzerdefinierte Stilvarianten
 
 /* Button: Mitmachen (Orange) */
 .wp-block-button.is-style-nabu-mitmachen .wp-block-button__link {
-    background-color: #ef7c00;
-    border-color:     #ef7c00;
+    background-color: #e47600;
+    border-color:     #e47600;
     color: #fff;
 }
 
 .wp-block-button.is-style-nabu-mitmachen .wp-block-button__link:hover {
-    background-color: #bc6200;
-    border-color:     #bc6200;
+    background-color: #bf6200;
+    border-color:     #bf6200;
 }
 
 /* Quote: NABU Hervorhebung */
 .wp-block-quote.is-style-nabu-hervorhebung {
     border-left: 6px solid #0068B4;
-    background-color: #e3e2d4;
+    background-color: #f7f6f2;
     padding: 1.25em 1.5em;
     font-style: normal;
 }
 
 .wp-block-quote.is-style-nabu-hervorhebung p {
     font-size: 1.15em;
-    color: #003c68;
+    color: #003560;
     font-weight: 600;
 }
 
 .wp-block-quote.is-style-nabu-hervorhebung cite {
-    color: #86846b;
+    color: #595858;
     font-size: 0.875em;
 }
 
@@ -494,9 +503,9 @@ Block Styles – Benutzerdefinierte Stilvarianten
 }
 
 .wp-block-image.is-style-nabu-teaser figcaption {
-    background-color: #e3e2d4;
+    background-color: #f7f6f2;
     padding: 0.4em 0.6em;
-    color: #333;
+    color: #000;
     font-size: 0.875em;
 }
 

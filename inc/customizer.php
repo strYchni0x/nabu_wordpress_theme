@@ -28,7 +28,7 @@ function nabu_customize_register( $wp_customize ) {
 	) ) );
 
 	$wp_customize->add_setting( 'nabu_accent_color', array(
-		'default'           => '#ef7c00',
+		'default'           => '#e47600',
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'refresh',
 	) );

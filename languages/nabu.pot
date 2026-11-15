@@ -66,7 +66,7 @@ msgid "BIC"
 msgstr ""
 
 #: functions.php:70
-msgid "Background beige"
+msgid "Background light"
 msgstr ""
 
 #: footer.php:90
@@ -586,4 +586,16 @@ msgstr ""
 #: inc/template-tags.php:23
 msgctxt "post date"
 msgid "Published on %s"
+msgstr ""
+
+#: functions.php
+msgid "NABU light blue"
+msgstr ""
+
+#: functions.php
+msgid "NABU yellow"
+msgstr ""
+
+#: functions.php
+msgid "NABU coral red"
 msgstr ""

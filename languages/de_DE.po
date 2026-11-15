@@ -68,8 +68,8 @@ msgid "BIC"
 msgstr "BIC"
 
 #: functions.php:70
-msgid "Background beige"
-msgstr "Hintergrund Beige"
+msgid "Background light"
+msgstr "Hintergrund Hell"
 
 #: footer.php:90
 #: inc/customizer.php:264
@@ -589,3 +589,15 @@ msgstr "mehr →"
 msgctxt "post date"
 msgid "Published on %s"
 msgstr "Veröffentlicht am %s"
+
+#: functions.php
+msgid "NABU light blue"
+msgstr "NABU Hellblau"
+
+#: functions.php
+msgid "NABU yellow"
+msgstr "NABU Gelb"
+
+#: functions.php
+msgid "NABU coral red"
+msgstr "NABU Korallrot"
